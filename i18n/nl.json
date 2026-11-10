@@ -1,0 +1,658 @@
+{
+  "header": {
+    "title": "Triple Balance",
+    "subtitle": "De smartphone-editie"
+  },
+  "footer": {
+    "skipExplanations": "Sla de uitleg over"
+  },
+
+  "start": {
+    "start1": {
+      "title": "Welkom op het stadhuis",
+      "text1": "Jij bent de nieuwe burgemeester van Phonopolis, een fictieve stadstaat waar smartphones een centrale rol spelen in het dagelijks leven."
+    },
+    "start2": {
+      "text1": "Jouw doel is om een circulaire smartphone-economie op te bouwen en daarbij een evenwicht te vinden tussen het geluk van de bewoners en het stadsbudget.",
+      "text2": "Je kunt beslissen over <span class=\"policy\">wetten en beleid</span>, investeren in onderzoek <span class=\"tech\">nieuwe  technologieën</span> of te maken krijgen met <span class=\"event\">gebeurtenissen</span>."
+    },
+    "start3": {
+      "text1": "Als burgemeester moet je een evenwicht vinden tussen het <b>geluk</b> van de burgers, de <b>begroting</b> van de stad, en de <b>circulariteit</b> van de smartphone economie.",
+      "text2": "Elk besluit kan gevolgen hebben voor alle drie!"
+    },
+    "start4": {
+      "text1": "Dit is de huidige stand bij Phonopolis:",
+      "row-circularity": "De circulaire index is nul, dus de huidige economie is helemaal niet circulair. Het kan niet slechter worden.",
+      "row-happiness": "De inwoners zijn redelijk tevreden, de geluksindex staat op 5. Zorg ervoor dat die nooit op nul komt te staan, anders word je uit je ambt gezet!",
+      "row-budget": "De huidige begroting van de stad bedraagt 5 megacoins. Als deze op nul komt te staan, word je uit je functie ontheven!"
+    },
+    "start5": {
+      "text1": "Wil je een deel van je budget besteden aan onderzoek naar <span class=\"tech\">nieuwe technologieën</span>?"
+    },
+    "start6": {
+      "text1": "Tijdens je bestuursperiode zijn er zes besluitrondes waarin je kiets welke <span class=\"policy\">beleidsmaatregelen</span> worden ingevoerd.",
+      "text2": "Je kan nu met de eerste ronde beginnen."
+    }
+  },
+
+  "policies": {
+    "extremeEcoTax": {
+      "title": "Extreme Eco belasting",
+      "description": "Hoge belasting op milieueffecten.",
+      "effects": {
+        "circularity": "Houden, repareren en hergebruiken van oude telefoons wordt aangemoedigd.",
+        "happiness": "Prijzen stijgen.",
+        "budget": "Extra belanstinginkomsten."
+      }
+    },
+    "mobileDetoxDay": {
+      "title": "Dag van de mobiele detox",
+      "description": "Op zaterdag blijven alle telefoons uit.",
+      "effects": {
+        "circularity": "Telefoons worden minder gebruikt en gaan mogelijk langer mee.",
+        "happiness": "Sommige mensen genieten van de telefoonvrije dag, terwijl anderen zich erdoor beperkt voelen."
+      }
+    },
+    "returnDeposit": {
+      "title": "Borg",
+      "description": "Verplichte borg bij de aankoop van een nieuwe telefoon, om recycling te waarborgen.",
+      "effects": {
+        "circularity": "Het wordt aangemoedigd om oude telefoons in te leveren voor recycling.",
+        "happiness": "De prijzen stijgen, ook al wordt de borg later terugbetaald."
+      }
+    },
+    "schoolRepairCafe": {
+      "title": "School Repair Café",
+      "description": "Nieuw vak op school: \"Introductie op smartphone reparatie\".",
+      "effects": {
+        "circularity": "Meer mensen kunnen hun telefoons zelf repareren en ze langer gebruiken."
+      }
+    },
+    "phoneSubscription": {
+      "title": "Mobiel abonnement",
+      "description": "Elk jaar een nieuwe telefoon.",
+      "effects": {
+        "circularity": "Er worden steeds meer telefoons vervangen en weggegooid.",
+        "happiness": "Mensen krijgen regelmatig de nieuwste apparaten.",
+        "budget": "Hogere omzet en inkomsten."
+      }
+    },
+    "onePhoneLaw": {
+      "title": "Een telefoon wet",
+      "description": "Een telefoon per persoon.",
+      "effects": {
+        "circularity": "Er worden minder telefoons gekocht en gebruikt.",
+        "happiness": "Mensen hebben minder vrijheid om meerdere apparaten te bezitten.",
+        "budget": "Er worden minder telefoons verkocht, wat leidt tot lagere belastinginkomsten."
+      }
+    },
+    "byod": {
+      "title": "BYOD",
+      "description": "Bring Your Own Device. Maak een tweede profiel aan in plaats van de zakelijke telefoon te gebruiken.",
+      "effects": {
+        "circularity": "Het aantal apparaten dat in gebruik is, wordt minder.",
+        "happiness": "Mensen zijn iets gelukkiger omdat ze maar één telefoon nodig hebben (te weinig om de index te beïnvloeden).",
+        "budget": "Implementatiekosten en lagere belastinginkomsten als gevolg van een daling van de verkoop van apparaten."
+      }
+    },
+    "youthProtection": {
+      "title": "Bescherming van de jeugd",
+      "description": "Mobiele telefoons pas vanaf 18 jaar.",
+      "effects": {
+        "circularity": "Er worden minder telefoons gekocht en gebruikt.",
+        "happiness": "Jongeren hebben geen toegang meer tot hun smartphones en ouders vinden het moeilijker om met hen te communiceren.",
+        "budget": "Er worden minder telefoons verkocht, wat leidt tot lagere belastinginkomsten."
+      }
+    },
+    "serviceContract": {
+      "title": "Service contract",
+      "description": "Verzekering voor reparatie van mobiele telefoons.",
+      "effects": {
+        "circularity": "Beschadigde telefoons worden vaker gerepareerd.",
+        "happiness": "Mensen kunnen hun telefoon tegen lagere kosten laten repareren.",
+        "budget": "Het stadsbudget stijgt licht als gevolg van meer reparatiewerkzaamheden en hogere belastinginkomsten, maar met veel minder dan één Megacoin."
+      }
+    },
+    "dontPhoneAndDrive": {
+      "title": "Bel niet tijdens het rijden",
+      "description": "Hoge boetes voor het gebruik van een mobiele telefoon tijdens het rijden.",
+      "effects": {
+        "circularity": "Heeft weinig invloed op de aankoop, reparatie of recycling van telefoons.",
+        "happiness": "Automobilisten krijgen te maken met strengere regels en hogere boetes.",
+        "budget": "De kosten voor handhaving zijn zo hoog dat er weinig geld van de boetes overblijft."
+      }
+    },
+    "sustainableDevicesAct": {
+      "title": "Wet duurzame apparaten",
+      "description": "Telefoons moeten onderdelen hebben die gemakkelijk kunnen worden verwijderd en gerecycled.",
+      "effects": {
+        "circularity": "Telefoons worden gemakkelijker te repareren en te recyclen.",
+        "happiness": "Het beleid heeft weinig directe gevolgen voor de gebruikers."
+      }
+    },
+    "recycleBonus": {
+      "title": "Recycle bonus",
+      "description": "Ruil je oude telefoon in voor een nieuwe.",
+      "effects": {
+        "circularity": "Moedigt het vroegtijdig vervangen van de telefoon aan.",
+        "happiness": "Geld besparen en verantwoord recyclen."
+      }
+    },
+    "noExploitativeFeatures": {
+      "title": "Geen uitbuitende functies",
+      "description": "Beperk spelontwerpelementen die spelers tot verslavend gedrag aanzetten.",
+      "effects": {
+        "circularity": "Mensen gebruiken hun telefoon minder en wisselen minder vaak van toestel.",
+        "happiness": "Mensen gaan bewuster om met hun telefoon."
+      }
+    },
+    "consumptionLimit": {
+      "title": "Verbruikslimiet",
+      "description": "Gebruikers kunnen slechts om de drie jaar een nieuwe telefoon kopen.",
+      "effects": {
+        "circularity": "Telefoons worden langer gebruikt.",
+        "happiness": "Mensen hebben minder vrijheid om te upgraden wanneer ze maar willen.",
+        "budget": "Er worden minder telefoons verkocht, wat leidt tot lagere belastinginkomsten."
+      }
+    },
+    "bioPhone": {
+      "title": "Bio telefoon",
+      "description": "Belastingvoordelen voor de productie van telefoons met biologisch afbreekbare onderdelen.",
+      "effects": {
+        "circularity": "Er worden milieuvriendelijkere materialen gebruikt.",
+        "budget": "De belastinginkomsten nemen af."
+      }
+    },
+    "limitOnlineFootprint": {
+      "title": "Limiet digitale voetafdruk",
+      "description": "Standaardfuncties voor digitaal minimalisme (bijv. tijdslimiet, gebruiksrapprten).",
+      "effects": {
+        "circularity": "Mensen gebruiken hun telefoon minder en vervangen deze minder vaak..",
+        "happiness": "Gebruikres ervaren de beperkingen als vervelend."
+      }
+    },
+    "unlock": {
+      "title": "Ontgrendelen",
+      "description": "Vereist dat alle telefoons van ouder dan 2 jaar wettelijk ontgrendelbaar moeten zijn.",
+      "effects": {
+        "circularity": "Oudere telefoons kunnen worden hergebruikt, doorverkocht en langer in gebruik blijven.",
+        "happiness": "Gebruikers hebben meer vrijheid om een ​​netwerk te kiezen en hun apparaten langer te blijven gebruiken.",
+        "budget": "Handhavingskosten en lagere belastinginkomsten door een afname in de verkoop van telefoons."
+      }
+    },
+    "closedLoopLaw": {
+      "title": "CloseWetgeving voor een gesloten kringloop",
+      "description": "Fabrikanten zijn verplicht om 15% gerecyclede materialen uit oude telefoons te gebruiken.",
+      "effects": {
+        "circularity": "Meer materialen worden teruggewonnen en hergebruikt in nieuwe apparaten.",
+        "happiness": "Het beleid heeft nauwelijks directe gevolgen voor consumenten."
+      }
+    }
+  },
+
+  "technologies": {
+    "magneticBreakApart": {
+      "title": "Magnetisch uiteenvallen",
+      "description": "De telefoon valt bij een val veilig uiteen in modulaire onderdelen.",
+      "effects": {
+        "circularity": "Beschadigde onderdelen kunnen worden vervangen in plaats van de gehele telefoon.",
+        "happiness": "Telefoons zijn na een ongelukje eenvoudiger en goedkoper te repareren."
+      }
+    },
+    "newTripleDiamondGlass": {
+      "title": "Nieuwe Triple Diamond Glas",
+      "description": "Sterke bescherming dankzij Elephant™ diamantglas.",
+      "effects": {
+        "circularity": "Telefoons gaan minder snel kapot en kunnen langer in gebruik blijven.",
+        "happiness": "elefoons zijn duurzamer en vereisen minder reparaties."
+      }
+    },
+    "lowOrbitSignalMesh": {
+      "title": "Signaalnetwerk in een lage baan om de aarde",
+      "description": "Wereldwijde, ononderbroken hogesnelheidstelefoondienst via satellieten.",
+      "effects": {
+        "happiness": "Gebruikers kunnen nu overal ter wereld verbonden blijven."
+      }
+    },
+    "smartBins": {
+      "title": "Slimme afvalbakken",
+      "description": "afvalbakken registreren wanneer er een telefoon in wordt gedeponeerd.",
+      "effects": {
+        "circularity": "Meer telefoons worden gerecycled."
+      }
+    },
+    "regenerativePortMatrix": {
+      "title": "Regeneratieve poortmatrix",
+      "description": "Een poorttechnologie waarbij aansluitpunten zichzelf fysiek herstellen wanneer ze slijtage vertonen.",
+      "effects": {
+        "circularity": "Telefoons hebben minder reparaties of vervangingen nodig.",
+        "happiness": "Gebruikers ervaren minder problemen bij het opladen."
+      }
+    },
+    "selfDestruct": {
+      "title": "Zelfvernietiging",
+      "description": "Vernietiging van gevoelige gegevens wanneer diefstal wordt gedetecteerd.",
+      "effects": {
+        "happiness": "Gebruikers hebben het gevoel dat hun persoonlijke gegevens beter beschermd zijn."
+      }
+    },
+    "modularSmartphone": {
+      "title": "Modulaire smartphone",
+      "description": "Eenvoudig vervangbare standaardonderdelen.",
+      "effects": {
+        "circularity": "Telefoons worden gemakkelijker te repareren, te upgraden en opnieuw te gebruiken.",
+        "happiness": "Reparaties zijn eenvoudiger en minder kostbaar."
+      }
+    },
+    "newSelfChargingBattery": {
+      "title": "Nieuwe zelfopladende batterij",
+      "description": "Batterij laadt zichzelf op door middel van omgevingsenergie.",
+      "effects": {
+        "happiness": "Telefoons hoeven midner vaak te worden opgeladen.",
+        "budget": "Er wordt minder geld uitgegeven aan energie, waardoor er meer middelen beschikbaar blijven voor andere doeleinden."    }
+    },
+    "smartShattering": {
+      "title": "Smart-Shattering",
+      "description": "Polymeren behuizingen die uiteenvallen wanneer ze worden blootgesteld aan een specifieke golflengte.",
+      "effects": {
+        "circularity": "Telefoons kunnen gemakkelijker uit elkaar worden gehaald voor recycling."
+      }
+    }
+  },
+
+  "events": {
+    "fireAtRecyclingPlant": {
+      "title": "Brand in sorteerinstallatie voor e-waste",
+      "description": "Een van de grootste recyclingfabrieken in Phonopolis staat op het punt af te branden.",
+      "outcomes": {
+        "putOutFire": {
+          "title": "Brandblussen",
+          "description": "Het is je gelukt om de brand te blussen.",
+          "effects": {
+            "circularity": "Dankzij jouw ingrijpen is de circulariteit niet afgenomen.",
+            "budget": "De operatie werd betaald uit het stadsbudget."
+          }
+        },
+        "doNothing": {
+          "title": "Niks doen",
+          "description": "De recyclingfabriek brandt af.",
+          "effects": {
+            "circularity": "Minder mogelijkheden om oude smartphones en materialen te recyclen."
+          }
+        }
+      }
+    },
+    "repairPartsMarketCollapse": {
+      "title": "Ineenstorting van de wereldwijde markt voor reserveonderdelen.",
+      "description": "Een grote leverancier van generieke reserveonderdelen in Phonopolis staat op het punt failliet te gaan.",
+      "outcomes": {
+        "doNothing": {
+          "title": "Niks doen",
+          "description": "De leverancier gaat failliet.",
+          "effects": {
+            "circularity": "Er worden minder telefoons gerepareerd en in gebruik gehouden.",
+            "happiness": "Reparaties worden duurder en moeilijker."
+          }
+        },
+        "provideFinancialSupport": {
+          "title": "Financiële steun verlenen",
+          "description": "Uw steun zorgt ervoor dat de leverancier kan blijven functioneren.",
+          "effects": {
+            "circularity": "Dankzij uw actie is de circulariteit niet afgenomen.",
+            "budget": "De financiële steun is betaald uit het uit stadsbudget."
+          }
+        }
+      }
+    },
+    "minimalistTechMovement": {
+      "title": "Minimalistische tech-beweging",
+      "description": "Een wereldwijde minimalisme-trend moedigt mensen in Phonopolis aan om minder apparaten te bezitten.",
+      "outcomes": {
+        "promoteMinimalism": {
+          "title": "Promoot de minimalisme-trend",
+          "description": "Mensen bezitten minder apparaten.",
+          "effects": {
+            "circularity": "Er zijn minder nieuwe telefoons nodig.",
+            "budget": "Lagere belastinginkomsten."
+          }
+        },
+        "encourageSpending": {
+          "title": "Consumentenbestedingen stimuleren",
+          "description": "U promoot nieuwe technologie en upgrades.",
+          "effects": {
+            "circularity": "Het positieve effect wordt door uw acties tenietgedaan.",
+            "budget": "Er is geld uit het stadsbudget gebruikt."
+          }
+        }
+      }
+    },
+    "newPineapplePhone": {
+      "title": "Nieuwe Pineapple-telefoon",
+      "description": "Een nieuw mobiel telefoonmodel met populaire functies staat op het punt gelanceerd te worden in Phonopolis.",
+      "outcomes": {
+        "promoteLongerPhoneUse": {
+          "title": "Langer telefoongebruik bevorderen",
+          "description": "Je beperkt de lancering van de nieuwe Pineapple-telefoon.",
+          "effects": {
+            "circularity": "Er worden minder telefoons die al in gebruik zijn, vervangen door het nieuwe model.",
+            "happiness": "Mensen zijn teleurgesteld dat ze niet over de nieuwste functies kunnen beschikken."
+          }
+        },
+        "doNothing": {
+          "title": "Niks doen",
+          "description": "Onbeperkte lancering van de nieuwe Pineapple-telefoon.",
+          "effects": {
+            "circularity": "Meer oude telefoons worden sneller vervangen.",
+            "happiness": "De nieuwste technologie is beschikbaar.",
+            "budget": "Er worden meer nieuwe telefoons verkocht, wat zorgt voor extra belastinginkomsten."
+          }
+        }
+      }
+    },
+    "phonePriceDrop": {
+      "title": "Prijsdaling",
+      "description": "Een technologische doorbraak maakt nieuwe telefoons extreem goedkoop in Phonopolis.",
+      "outcomes": {
+        "doNothing": {
+          "title": "Niks doen",
+          "description": "Niewe telefoons zijn goedkoop.",
+          "effects": {
+            "circularity": "Oudere apparaten worden sneller vervangen.",
+            "happiness": "Lagere prijzen voor telefoons.",
+            "budget": "Er wordt minder belasting aan de stad afgedragen, omdat de producten goedkoper zijn."
+          }
+        },
+        "protectRepairAndReuse": {
+          "title": "Bescherm repareer en hergebruik",
+          "description": "Je hebt belasting geheven op goedkope telefoons.",
+          "effects": {
+            "circularity": "Mensen kopen net zoveel telefoons als voorheen.",
+            "happiness": "Nieuwe belasting.",
+            "budget": "Extra belastinginkomsten."
+          }
+        }
+      }
+    },
+    "globalChipCrisis": {
+      "title": "Wereldwijde chipcrisis",
+      "description": "De productie van mobiele telefoons in Phonopolis neemt af. Nieuwe mobiele telefoons zullen een stuk duurder worden.",
+      "outcomes": {
+        "supportRepairAndReuse": {
+          "title": "Reparatie en hergebruik stimuleren",
+          "description": "Je moedigt inwoners aan om telefoons te repareren, opnieuw te gebruiken en refurbished toestellen te kopen.",
+          "effects": {
+            "circularity": "Er worden minder nieuwe telefoons gekocht.",
+            "happiness": "Gebrek aan nieuwe apparaten.",
+            "budget": "De campagne werd gefinancierd vanuit het stadsbudget."
+          }
+        },
+        "subsidizePhonePurchases": {
+          "title": "Subsidieer de aankoop van nieuwe telefoons",
+          "description": "Je subsidieert de aankoop van nieuwe telefoons.",
+          "effects": {
+            "happiness": "Mensen blijven net zo tevreden als vóór de chipcrisis.",
+            "budget": "Er wordt geld uit het stadsbudget."
+          }
+        }
+      }
+    },
+    "toxicWaste": {
+      "title": "Giftig afval",
+      "description": "Nieuwe materialen veroorzaken giftig afval tijdens het recyclen.",
+      "outcomes": {
+        "introduceStricterRegulations": {
+          "title": "Strengere regelgeving invoeren",
+          "description": "Je stelt strengere eisen aan recyclingmethoden en afvalverwerking.",
+          "effects": {
+            "circularity": "Er worden op korte termijn minder materialen verwerkt.",
+            "happiness": "Je maatregelen hebben geen invloed op de tevredenheid.",
+            "budget": "De recyclingkosten stijgen, maar het stadsbudget blijft ongewijzigd."
+          }
+        },
+        "continueRecycling": {
+          "title": "Recycling ongewijzigd voortzetten",
+          "description": "De recyclingactiviteiten gaan door, ondanks de risico's.",
+          "effects": {
+            "circularity": "Materialen worden nog steeds gerecycled.",
+            "happiness": "Giftig afval schaadt het milieu en de volksgezondheid.",
+            "budget": "Een toename van ziektegevallen vormt een financiële last voor het stadsbudget."
+          }
+        }
+      }
+    },
+    "fearOfDataTheft": {
+      "title": "Angst voor diefstal van gegevens",
+      "description": "Een viraal nieuwsbericht in Phonopolis zorgt ervoor dat mensen bang zijn om hun oude apparaten weg te geven of te recyclen.",
+      "outcomes": {
+        "launchInformationCampaign": {
+          "title": "Een publieke informatiecampagne starten",
+          "description": "Je hebt een publieke informatiecampagne gelanceerd.",
+          "effects": {
+            "circularity": "Er worden meer telefoons gedoneerd, hergebruikt en gerecycled.",
+            "happiness": "Mensen voelen zich veiliger wat betreft hun persoonlijke gegevens (zelfs nog meer dan vóór het voorval).",
+            "budget": "De campagne werd gefinancierd vanuit het stadsbudget."
+          }
+        },
+        "doNothing": {
+          "title": "Niks doen",
+          "description": "Mensen zijn bang om oude apparaten weg te geven of te recyclen.",
+          "effects": {
+            "circularity": "Minder telefoons worden hergebruikt, gerepareerd of gerecycled.",
+            "happiness": "Angst voor gegevensdiefstal."
+          }
+        }
+      }
+    },
+    "globalRecession": {
+      "title": "Wereldwijde recessie",
+      "description": "Mensen in Phonopolis hebben minder besteedbaar inkomen.",
+      "outcomes": {
+        "supportCircularSolutions": {
+          "title": "Ondersteun circulaire oplossingen",
+          "description": "Je biedt prikkels voor reparatie, hergebruik en refurbishen.",
+          "effects": {
+            "circularity": "Telefoons en onderdelen blijven langer in gebruik.",
+            "happiness": "Betaalbare apparaten blijven toegankelijk, ondanks de recessie.",
+            "budget": "De prikkels worden gefinancierd vanuit het stadsbudget."
+          }
+        },
+        "supportPhonePurchases": {
+          "title": "Ondersteuning bieden bij consumentenaankopen",
+          "description": "Je biedt vouchers en belastingverlagingen aan voor nieuwe telefoons.",
+          "effects": {
+            "circularity": "De vervangingsfrequentie blijft gelijk.",
+            "happiness": "Mensen behouden toegang tot nieuwe apparaten, ondanks de economische recessie.",
+            "budget": "Vouchers of belastingverlagingen worden gefinancierd vanuit het stadsbudget."
+          }
+        }
+      }
+    }
+  },
+
+  "common": {
+    "continue": "Doorgaan",
+    "back": "Terug",
+    "restart": "Opnieuw starten",
+    "credits": "Credits",
+    "yes": "Ja",
+    "no": "Nee",
+    "runAgain": "Stel je opnieuw verkiesbaar",
+    "learnScore": "Meer informatie over de score",
+    "explainEconomy": "Wat is een circulaire smartphone-economie?",
+    "explainHappiness": "Wat maakt mensen gelukkig?",
+    "yourChoice": "Jouw keuze:",
+    "eventHappens": "Een <span class=\"gebeurtenis\">EVENT</span> vindt plaats:",
+    "roundProgress": "Ronde {{round}}/{{total}}",
+    "languageLabel": "Taal",
+    "languageRetry": "Opnieuw proberen",
+    "languageLoading": "Laden…",
+    "translationLoadError": "Vertalingen konden niet worden geladen. Controleer je verbinding en probeer het opnieuw.",
+    "languageLoadError": "Deze taal kon niet worden geladen. Je vorige taal blijft actief."
+  },
+
+  "techRounds": {
+    "tech": {
+      "text1": "Elke <span class=\"tech\">nieuww technologie</span> waarin je investeert kost 1 Megacoin. Je investering kan het geluk van mensen en de circulariteit verbeteren.",
+      "text2": "In hoeveel nieuwe technologieën wil je investeren?",
+      "choiceSeparator": "of"
+    },
+    "tech1": {
+      "text1": "Onderzoekers werken momenteel aan een <span class=\"tech\">nieuwe technologie</span>.",
+      "text2": "Deze zal op een later moment tijdens je zittingsperiode beschikbaar komen."
+    },
+    "tech2": {
+      "text1": "Onderzoekers werken momenteel aan twee <span class=\"tech\">nieuwe technologieën</span>.",
+      "text2": "Dezen zullen op een later moment tijdens je zittingsperiode beschikbaar komen."
+    },
+    "tech3": {
+      "text1": "Onderzoekers werken momenteel aan drie <span class=\"tech\">nieuwe technologieën</span>.",
+      "text2": "Dezen zullen op een later moment tijdens je zittingsperiode beschikbaar komen."
+    },
+    "newTech1": {
+      "text1": "Je investering in onderzoek werpt nu zijn vruchten af: <strong>A <span class=\"tech\">nieuwe technologie </span> is klaar!</strong>"
+    },
+    "newTech1a": {
+      "text1": "Je kunt een van de nieuwe technologieën kiezen door erop te klikken."
+    },
+    "newTech2": {
+      "text1": "Je investering in onderzoek werpt weer zijn vruchten af: <strong>A <span class=\"tech\">nieuwe technologie </span> is klaar!</strong>"
+    },
+    "newTech2a": {
+      "text1": "Je kunt een van de nieuwe technologieën kiezen door erop te klikken."
+    },
+    "newTech3": {
+      "text1": "Je investering in onderzoek werpt weer zijn vruchten af: <strong>A <span class=\"tech\">nieuwe technologie</span> is klaar!</strong>"
+    },
+    "newTech3a": {
+      "text1": "Je kunt een van de nieuwe technologieën kiezen door erop te klikken."
+    }
+  },
+
+  "end": {
+    "end1": {
+      "title": "Je ambtstermijn in Phonopolis is voorbij.",
+      "text1": "Ontdek wat je tijdens je ambtstermijn hebt bereikt."
+    },
+    "end2": {
+      "text1": "Dit is de toestand van Phonopolis na jouw bestuursperiode:",
+      "circularity": {
+        "minimaal": "Jouw keuzes hebben de <strong>circulariteit</strong> van de economie niet echt verbeterd.",
+        "beperkt": "Jouw keuzes waren niet erg efficiënt in het opbouwen van een <strong>circulaire</strong> economie.",
+        "verbeterd": "Je hebt de <strong>circulariteit</strong> van de economie verbeterd.",
+        "aanzienlijk": "Je hebt de <strong>circulariteit</strong> van de economie aanzienlijk verbeterd.",
+        "enorm": "Je hebt de <strong>circulariteit</strong> van de economie enorm verbeterd."
+      },
+      "happiness": {
+        "laag": "Inwoners zijn niet erg <strong>tevreden</strong> met je keuzes.",
+        "stabiel": "Het <strong>geluk</strong> van de inwoners is niet veel veranderd.",
+        "hoog": "Inwoners zijn behoorlijk <strong>tevreden</strong> met je keuzes.",
+        "heel hoog": "Inwoners zijn erg <strong>tevreden</strong> met je keuzes."
+      },
+      "budget": {
+        "bijna failliet": "Je bent maar net aan een faillissement ontsnapt.",
+        "afname": "Je hebt minder <strong>geld</strong> over dan waarmee je begon.",
+        "onveranderd": "Je hebt evenveel <strong>geld</strong> uitgegeven als je hebt verdiend.",
+        "toegenomen": "Je hebt meer <strong>geld</strong> verdiend dan je hebt uitgegeven."
+      }
+    },
+    "end3": {
+      "scoreText": "Je score is {{score}} van 53 (percentiel {{percentile}} / 100).",
+      "highScore": {
+        "text1": "<strong>Je hebt de topscore behaald! Gefeliciteerd!</strong>"
+      },
+      "outstanding": {
+        "text1": "Je was een uitstekende burgemeester voor Phonopolis. <strong>Gefeliciteerd!</strong>"
+      },
+      "good": {
+        "text1": "Je was een goede burgemeester van Phonopolis."
+      },
+      "average": {
+        "text1": "Je was een gemiddelde burgemeester van Phonopolis."
+      },
+      "poor": {
+        "text1": "Je was een slechte burgemeester van Phonopolis."
+      },
+      "barelySurvived": {
+        "text1": "Je hebt deze zittingsperiode in Phonopolis ternauwernood overleefd."
+      }
+    },
+    "end4": {
+      "text1": "De score wordt berekend op basis van de waarden voor circulariteit, geluk en je resterende budget.",
+      "scoreLabel": "Score",
+      "text2": "Met de waarden uit je huidige spel heb je het volgende behaald:"
+    },
+    "end5": {
+      "text1": "Het spel bevat talloze beslismomenten waarbij je uit verschillende opties kiest: er zijn zes rondes met <span class=\"policy\">beleidsbeslissingen</span>, maximaal drie rondes met <span class=\"tech\">technologie</span> beslissingen, en maximaal drie rondes met <span class=\"event\">gebeurtenissen</span> mogelijk.",
+      "text2": "Elke reeks beslissingen creëert een uniek verloop door het spel, wat resulteert in een groot aantal mogelijke combinaties.",
+      "text3": "In totaal zijn er meer dan 4 miljoen (4.054.180) mogelijke spelverlopen!<br> {{playthroughCount, number}} daarvan leiden tot een succesvol resultaat."
+    },
+    "end6": {
+      "scoreText": "Je score: {{score}} (percentiel {{percentile}} / 100).",
+      "text1": "Bekijk hoeveel geslaagde speelrondes tot een bepaalde score leiden:",
+      "chart": {
+        "title": "Geslaagde speelrondes per eindscore",
+        "scoreAxis": "Eindscore",
+        "pathsAxis": "Aantal geslaagde speelrondes",
+        "you": "Jij",
+        "binLabel": "Score {{score}}: {{paths}} geslaagde speelronde.",
+        "description": "Verdeling van {{total}} geslaagde speelronde. Jouw score is {{score}} (percentiel {{percentile}}/100). Er zijn {{paths}} geslaagde speelrondes met die score. De aantallen zijn geen kansberekening.",
+        "descriptionWithoutScore": "Verdeling van {{total}} geslaagde speelrondes bij eindscore. De aantallen zijn geen kansberekening.",
+        "loading": "Histogram wordt geladen…",
+        "loadError": "Het histogram kon niet worden geladen."
+      }
+    },
+    "end7": {
+      "text1": "Wat is een percentiel?",
+      "text2": "Het percentiel geeft aan hoe jouw score zich verhoudt tot andere mogelijke scores.",
+      "text3": "Aangezien jouw score {{score}} is en je percentiel {{percentile}} / 100, betekent dit dat {{percentile}}% van alle mogelijke speelsessies een score haalt die lager is dan of gelijk is aan {{score}}.",
+      "text4": "Als je een percentiel van X / 100 behaalt, betekent dit dat X% van alle mogelijke speelsessies een score oplevert die lager is dan of gelijk is aan die van jou."
+    },
+    "credits": {
+      "text1": "Dit spel is ontwikkeld door IMAGINARY gGmbH © 2026.",
+      "text2": "Gameplay: Bianca Violet",
+      "text3": "Realisatie: Bianca Violet and Daniel Ramos",
+      "text4": "Illustraties: Ariel Kahtan",
+      "funding": "This work is part of the Erasmus+ project Math4Sustainability and co-funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them. Project number 2024-1-DE03-KA220-SCH-000246047."
+    },
+    "gamOver": {
+      "title": "Het volk komt in opstand",
+      "text1": "De stad vertrouwt jouw leiderschap niet langer. Woedende burgers en politieke rivalen hebben je uit je ambt gezet.",
+      "label": "Game Over!"
+    },
+    "gameOver2": {
+      "title": "Stadsbudget uitgeput",
+      "text1": "Door jouw beleid is het stadsbudget tot nul gedaald. De stad kan niet langer functioneren en je bent uit je ambt gezet.",
+      "label": "Game Over!"
+    }
+  },
+
+  "toelichting": {
+    "economie": {
+      "text1": "Een circulaire economie voor smartphones betekent dat telefoons zo lang mogelijk bruikbaar blijven, in plaats van dat ze snel worden weggegooid. Belangrijke strategieën zijn onder meer <b>reduce</b> (minder nieuwe telefoons kopen), <b>reuse (hergebruik)</b>, <b>repareren</b>, en <b>recycelen</b>, dit helpt om grondstoffen te besparen en afval te verminderen."
+    },
+    "geluk": {
+      "text1": "De inwoners van Phonopolis zijn gelukkig wanneer iedereen die een telefoon wil hebben, er ook daadwerkelijk een heeft; wanneer telefoons goed werken, gebruiksvriendelijk zijn en gebruikersgegevens beschermd blijven. Telefoons mogen bovendien niet te duur zijn en niet snel kapotgaan."
+    }
+  },
+
+  "rounds": {
+    "round1": {
+      "text1": "Kies een van de mogelijke nieuwe beleidsopties door erop te klikken."
+    },
+    "round2": {
+      "text1": "Het door jou gekozen beleid blijft van kracht. Je kunt nu een extra beleidskeuze maken."
+    },
+    "round3": {
+      "text1": "Kies een van de mogelijke nieuwe beleidsopties door erop te klikken."
+    },
+    "round4": {
+      "text1": "Kies een van de mogelijke nieuwe beleidsopties door erop te klikken."
+    },
+    "round5": {
+      "text1": "Kies een van de mogelijke nieuwe beleidsopties door erop te klikken."
+    },
+    "round6": {
+      "text1": "Kies een van de mogelijke nieuwe beleidsopties door erop te klikken. (Dit is de laatste ronde.)"
+    }
+  }
+}
