@@ -14,10 +14,10 @@
     },
     "start2": {
       "text1": "Jouw doel is om een circulaire smartphone-economie op te bouwen en daarbij een evenwicht te vinden tussen het geluk van de bewoners en het stadsbudget.",
-      "text2": "Je kunt beslissen over <span class=\"policy\">wetten en beleid</span>, investeren in onderzoek <span class=\"tech\">nieuwe  technologieën</span> of te maken krijgen met <span class=\"event\">gebeurtenissen</span>."
+      "text2": "Je kunt beslissen over <span class=\"policy\">wetten en beleid</span>, investeren in onderzoek naar <span class=\"tech\">nieuwe  technologieën</span> of te maken krijgen met <span class=\"event\">gebeurtenissen</span>."
     },
     "start3": {
-      "text1": "Als burgemeester moet je een evenwicht vinden tussen het <b>geluk</b> van de burgers, de <b>begroting</b> van de stad, en de <b>circulariteit</b> van de smartphone economie.",
+      "text1": "Als burgemeester moet je een evenwicht vinden tussen het <b>geluk</b> van de burgers, de <b>begroting</b> van de stad en de <b>circulariteit</b> van de smartphone economie.",
       "text2": "Elk besluit kan gevolgen hebben voor alle drie!"
     },
     "start4": {
@@ -30,7 +30,7 @@
       "text1": "Wil je een deel van je budget besteden aan onderzoek naar <span class=\"tech\">nieuwe technologieën</span>?"
     },
     "start6": {
-      "text1": "Tijdens je bestuursperiode zijn er zes besluitrondes waarin je kiets welke <span class=\"policy\">beleidsmaatregelen</span> worden ingevoerd.",
+      "text1": "Tijdens je bestuursperiode zijn er zes besluitrondes waarin je kiest welk <span class=\"policy\">beleid </span> wordt ingevoerd.",
       "text2": "Je kan nu met de eerste ronde beginnen."
     }
   },
@@ -481,7 +481,7 @@
     "explainEconomy": "Wat is een circulaire smartphone-economie?",
     "explainHappiness": "Wat maakt mensen gelukkig?",
     "yourChoice": "Jouw keuze:",
-    "eventHappens": "Een <span class=\"gebeurtenis\">EVENT</span> vindt plaats:",
+    "eventHappens": "Een <span class=\"gebeurtenis\">gebeurtenis</span> vindt plaats:",
     "roundProgress": "Ronde {{round}}/{{total}}",
     "languageLabel": "Taal",
     "languageRetry": "Opnieuw proberen",
@@ -492,21 +492,21 @@
 
   "techRounds": {
     "tech": {
-      "text1": "Elke <span class=\"tech\">nieuww technologie</span> waarin je investeert kost 1 Megacoin. Je investering kan het geluk van mensen en de circulariteit verbeteren.",
+      "text1": "Elke <span class=\"tech\">nieuwe technologie</span> waarin je investeert kost 1 Megacoin. Je investering kan het geluk van mensen en de circulariteit verbeteren.",
       "text2": "In hoeveel nieuwe technologieën wil je investeren?",
       "choiceSeparator": "of"
     },
     "tech1": {
       "text1": "Onderzoekers werken momenteel aan een <span class=\"tech\">nieuwe technologie</span>.",
-      "text2": "Deze zal op een later moment tijdens je zittingsperiode beschikbaar komen."
+      "text2": "Deze zal op een later moment tijdens je ambtstermijn beschikbaar komen."
     },
     "tech2": {
       "text1": "Onderzoekers werken momenteel aan twee <span class=\"tech\">nieuwe technologieën</span>.",
-      "text2": "Dezen zullen op een later moment tijdens je zittingsperiode beschikbaar komen."
+      "text2": "deze zullen op een later moment tijdens je ambtstermijn beschikbaar komen."
     },
     "tech3": {
       "text1": "Onderzoekers werken momenteel aan drie <span class=\"tech\">nieuwe technologieën</span>.",
-      "text2": "Dezen zullen op een later moment tijdens je zittingsperiode beschikbaar komen."
+      "text2": "deze zullen op een later moment tijdens je ambtstermijn beschikbaar komen."
     },
     "newTech1": {
       "text1": "Je investering in onderzoek werpt nu zijn vruchten af: <strong>A <span class=\"tech\">nieuwe technologie </span> is klaar!</strong>"
@@ -536,23 +536,23 @@
     "end2": {
       "text1": "Dit is de toestand van Phonopolis na jouw bestuursperiode:",
       "circularity": {
-        "minimaal": "Jouw keuzes hebben de <strong>circulariteit</strong> van de economie niet echt verbeterd.",
-        "beperkt": "Jouw keuzes waren niet erg efficiënt in het opbouwen van een <strong>circulaire</strong> economie.",
-        "verbeterd": "Je hebt de <strong>circulariteit</strong> van de economie verbeterd.",
-        "aanzienlijk": "Je hebt de <strong>circulariteit</strong> van de economie aanzienlijk verbeterd.",
-        "enorm": "Je hebt de <strong>circulariteit</strong> van de economie enorm verbeterd."
+        "minimal": "Jouw keuzes hebben de <strong>circulariteit</strong> van de economie niet echt verbeterd.",
+        "limited": "Jouw keuzes waren niet erg efficiënt in het opbouwen van een <strong>circulaire</strong> economie.",
+        "improved": "Je hebt de <strong>circulariteit</strong> van de economie verbeterd.",
+        "significant": "Je hebt de <strong>circulariteit</strong> van de economie aanzienlijk verbeterd.",
+        "tremendous": "Je hebt de <strong>circulariteit</strong> van de economie enorm verbeterd."
       },
       "happiness": {
-        "laag": "Inwoners zijn niet erg <strong>tevreden</strong> met je keuzes.",
-        "stabiel": "Het <strong>geluk</strong> van de inwoners is niet veel veranderd.",
-        "hoog": "Inwoners zijn behoorlijk <strong>tevreden</strong> met je keuzes.",
-        "heel hoog": "Inwoners zijn erg <strong>tevreden</strong> met je keuzes."
+        "low": "Inwoners zijn niet erg <strong>tevreden</strong> met je keuzes.",
+        "stable": "Het <strong>geluk</strong> van de inwoners is niet veel veranderd.",
+        "high": "Inwoners zijn behoorlijk <strong>tevreden</strong> met je keuzes.",
+        "veryHigh": "Inwoners zijn erg <strong>tevreden</strong> met je keuzes."
       },
       "budget": {
-        "bijna failliet": "Je bent maar net aan een faillissement ontsnapt.",
-        "afname": "Je hebt minder <strong>geld</strong> over dan waarmee je begon.",
-        "onveranderd": "Je hebt evenveel <strong>geld</strong> uitgegeven als je hebt verdiend.",
-        "toegenomen": "Je hebt meer <strong>geld</strong> verdiend dan je hebt uitgegeven."
+        "nearBankruptcy": "Je bent maar net aan een faillissement ontsnapt.",
+        "decreased": "Je hebt minder <strong>geld</strong> over dan waarmee je begon.",
+        "unchanged": "Je hebt evenveel <strong>geld</strong> uitgegeven als je hebt verdiend.",
+        "increased": "Je hebt meer <strong>geld</strong> verdiend dan je hebt uitgegeven."
       }
     },
     "end3": {
@@ -573,7 +573,7 @@
         "text1": "Je was een slechte burgemeester van Phonopolis."
       },
       "barelySurvived": {
-        "text1": "Je hebt deze zittingsperiode in Phonopolis ternauwernood overleefd."
+        "text1": "Je hebt deze ambtstermijn in Phonopolis ternauwernood overleefd."
       }
     },
     "end4": {
@@ -626,11 +626,11 @@
     }
   },
 
-  "toelichting": {
-    "economie": {
+  "explanations": {
+    "economy": {
       "text1": "Een circulaire economie voor smartphones betekent dat telefoons zo lang mogelijk bruikbaar blijven, in plaats van dat ze snel worden weggegooid. Belangrijke strategieën zijn onder meer <b>reduce</b> (minder nieuwe telefoons kopen), <b>reuse (hergebruik)</b>, <b>repareren</b>, en <b>recycelen</b>, dit helpt om grondstoffen te besparen en afval te verminderen."
     },
-    "geluk": {
+    "happiness": {
       "text1": "De inwoners van Phonopolis zijn gelukkig wanneer iedereen die een telefoon wil hebben, er ook daadwerkelijk een heeft; wanneer telefoons goed werken, gebruiksvriendelijk zijn en gebruikersgegevens beschermd blijven. Telefoons mogen bovendien niet te duur zijn en niet snel kapotgaan."
     }
   },
