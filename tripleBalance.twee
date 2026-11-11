@@ -206,7 +206,6 @@ ui.footerCenter: ""
 
 {translate text: "end.credits.text4"}
 
-
 <div class="credits-funding">
 {translate text: "end.credits.funding"}
 </div>
@@ -2826,7 +2825,7 @@ html, body, #page, #passages {
   line-height: 1.5;
   margin: 0;
   position: relative;
-  top: 40px;
+  top: -5px;
 }
 
 #page .illustration-group,
