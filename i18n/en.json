@@ -558,6 +558,9 @@
     },
     "end3": {
       "scoreText": "Your score is {{score}} of 53 (percentile {{percentile}} / 100).",
+      "corruption": {
+        "text1": "<strong>You have led Phonopolis to unprecedented success. Unfortunately, your score does not reflect reality. The Anti-Corruption Authority is investigating.</strong>"
+      },
       "highScore": {
         "text1": "<strong>You've hit the high score! Congratulations!</strong>"
       },

@@ -557,6 +557,9 @@
     },
     "end3": {
       "scoreText": "Je score is {{score}} van 53 (percentiel {{percentile}} / 100).",
+      "corruption": {
+        "text1": "<strong>Je hebt Phonopolis naar ongekend succes geleid. Helaas komt je score niet overeen met de werkelijkheid. De Anticorruptie-autoriteit stelt een onderzoek in.</strong>"
+      },
       "highScore": {
         "text1": "<strong>Je hebt de topscore behaald! Gefeliciteerd!</strong>"
       },

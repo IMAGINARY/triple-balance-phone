@@ -331,6 +331,13 @@ ${i}`),b(i)}function $e(n,e=!1){return Qo(Lo(n),An(),Pn(),e)}class Ko extends fe
   right: 5px;
 }
 
+#page .score-corrupt {
+  height: 150px;
+  position: relative;
+  top: 3px;
+  right: 5px;
+}
+
 #page .balance-illustration {
   height: 103px;
   position: relative;
@@ -1541,9 +1548,14 @@ ui.status: true
 ui.footerCenter: &quot;&quot;
 --
 &lt;div class=&quot;ending-assessment&quot;&gt;
+[if score &lt;= window.TripleBalanceScores.minimumScore(100)]
 {translate text: &quot;end.end3.scoreText&quot;, score: score, percentile: Math.floor(window.TripleBalanceScores.percentile(score))} &lt;br&gt;&lt;br&gt;
 
-[if score &gt;= window.TripleBalanceScores.minimumScore(100)]
+[if score &gt; window.TripleBalanceScores.minimumScore(100)]
+&lt;img src=&quot;images/corruption.webp&quot; class=&quot;score-corrupt&quot;&gt; &lt;br&gt;
+{translate rich text: &quot;end.end3.corruption.text1&quot;}
+
+[if score == window.TripleBalanceScores.minimumScore(100)]
 &lt;img src=&quot;images/very-good.png&quot; class=&quot;score-icon&quot;&gt; &lt;img src=&quot;images/very-good.png&quot; class=&quot;score-icon&quot;&gt; &lt;img src=&quot;images/very-good.png&quot; class=&quot;score-icon&quot;&gt; &lt;br&gt;
 {translate rich text: &quot;end.end3.highScore.text1&quot;}
 

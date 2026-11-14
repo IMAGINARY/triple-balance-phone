@@ -551,6 +551,9 @@
     },
     "end3": {
       "scoreText": "Deine Punktzahl beträgt {{score}} von 53 (Perzentil {{percentile}} / 100).",
+      "corruption": {
+        "text1": "<strong>Du hast Phonopolis zu ungeahntem Erfolg geführt. Leider spiegelt dein Punktestand nicht die Realität wider. Die Antikorruptionsbehörde ermittelt.</strong>"
+      },
       "highScore": {
         "text1": "<strong>Du hast den High-Score geknackt! Herzlichen Glückwunsch!</strong>"
       },

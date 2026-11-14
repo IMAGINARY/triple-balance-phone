@@ -287,9 +287,14 @@ ui.status: true
 ui.footerCenter: ""
 --
 <div class="ending-assessment">
+[if score <= window.TripleBalanceScores.minimumScore(100)]
 {translate text: "end.end3.scoreText", score: score, percentile: Math.floor(window.TripleBalanceScores.percentile(score))} <br><br>
 
-[if score >= window.TripleBalanceScores.minimumScore(100)]
+[if score > window.TripleBalanceScores.minimumScore(100)]
+<img src="images/corruption.webp" class="score-corrupt"> <br>
+{translate rich text: "end.end3.corruption.text1"}
+
+[if score == window.TripleBalanceScores.minimumScore(100)]
 <img src="images/very-good.png" class="score-icon"> <img src="images/very-good.png" class="score-icon"> <img src="images/very-good.png" class="score-icon"> <br>
 {translate rich text: "end.end3.highScore.text1"}
 
@@ -2609,6 +2614,13 @@ html, body, #page, #passages {
 
 #page .score-icon {
   height: 50px;
+  position: relative;
+  top: 3px;
+  right: 5px;
+}
+
+#page .score-corrupt {
+  height: 150px;
   position: relative;
   top: 3px;
   right: 5px;
