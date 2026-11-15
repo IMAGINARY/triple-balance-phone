@@ -226,8 +226,7 @@ ui.footerCenter: ""
 
 :: End2 [ending prose] {"position":"25,1550","size":"100,100"}
 ui.status: true
-ui.headerRight: "{translated link: \"common.restart\", to: '[[Restart->Start]]'}"
-ui.footerCenter: ""
+ui.headerCenter: "{translated link: \"common.restart\", to: '[[Restart->Start]]'}"
 --
 {translate text: "end.end2.text1"}
 {summary row: "circularity", value: circle, first: true}
@@ -282,9 +281,8 @@ ui.footerCenter: ""
 
 
 :: End3 [ending] {"position":"475,1275","size":"100,100"}
-ui.footerRight: "{translated link: \"common.credits\", to: '[[Credits->End.Credits]]'}"
+ui.footerCenter: "{translated link: \"common.credits\", to: '[[Credits->End.Credits]]'}"
 ui.status: true
-ui.footerCenter: ""
 --
 <div class="ending-assessment">
 [if score <= window.TripleBalanceScores.minimumScore(100)]
