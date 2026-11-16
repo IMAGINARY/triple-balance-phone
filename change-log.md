@@ -1531,3 +1531,14 @@ with matching interpolation placeholders and HTML markup.
 Validation: rendered and inspected the SVG; checked XML, document links,
 arithmetic and the saved analysis source hash. The original PDF's SHA-256 is
 unchanged. No story, dictionaries, game export or analysis data were modified.
+
+## 2026-11-16 — Credits license and local icons
+
+- Expanded the credits license name in English, German, French and Dutch to CC BY-SA 4.0.
+- Added the requested Creative Commons heart, attribution and share-alike PNGs
+  under `images/`, displayed together above the license paragraph. Images have empty
+  alternative text because the adjacent sentence already names the license.
+- Added International (Internationaal in Dutch) to all four license names and
+  used the official German heading, Namensnennung-Share Alike.
+- Updated the editable story and published HTML. The game loads all three icons
+  locally, without contacting the Creative Commons server.

@@ -204,6 +204,8 @@ ui.footerLeft: "{translated link: \"common.learnScore\", to: '[[Learn more about
 ui.footerRight: "{translated link: \"common.restart\", to: '[[Restart->Start]]'}"
 ui.footerCenter: ""
 --
+<span class="credits-license-icons"><img src="images/cc-heart.png" alt="" class="credits-license-icon"> <img src="images/cc-by.png" alt="" class="credits-license-icon"> <img src="images/cc-sa.png" alt="" class="credits-license-icon"></span>
+
 {translate text: "end.credits.text1"}
 
 {translate text: "end.credits.text2"}
@@ -2903,6 +2905,17 @@ html, body, #page, #passages {
 
 #page .game-over-budget-icon {
   height: 70px;
+}
+
+#page .credits-license-icons {
+  white-space: nowrap;
+}
+
+#page .credits-license-icon {
+  display: inline-block;
+  width: auto;
+  height: 1.25em;
+  vertical-align: middle;
 }
 
 #page .credits-funding {
