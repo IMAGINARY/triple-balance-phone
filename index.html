@@ -1318,8 +1318,9 @@ this.svg.setAttribute('height', height - cropTop - cropBottom);
 
   // Useful for diagnostics; language is deliberately kept outside story state.
   window.ChapbookI18n = { languages, changeLanguage, renderText: translatedText, ready: initialize() };
-});</script><tw-tag name="technology" color="yellow"></tw-tag><tw-tag name="policy" color="blue"></tw-tag><tw-tag name="event" color="purple"></tw-tag><tw-tag name="intro" color="green"></tw-tag><tw-tag name="outcome" color="red"></tw-tag><tw-tag name="round" color="orange"></tw-tag><tw-passagedata pid="1" name="BIO PHONE" tags="policy" position="1275,1525" size="100,100">circle: circle + 1
-money: money - 1
+});</script><tw-tag name="technology" color="yellow"></tw-tag><tw-tag name="policy" color="blue"></tw-tag><tw-tag name="event" color="purple"></tw-tag><tw-tag name="intro" color="green"></tw-tag><tw-tag name="outcome" color="red"></tw-tag><tw-tag name="round" color="orange"></tw-tag><tw-passagedata pid="1" name="BIO PHONE" tags="policy" position="1275,1525" size="100,100">check: check + 1
+circle (check ==1): circle + 1
+money (check ==1): money - 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;policies.bioPhone.title&quot;}
@@ -1338,8 +1339,9 @@ money: money - 1
 
 [continue]
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="BYOD" tags="policy" position="1400,975" size="100,100">circle: circle + 1
-money: money - 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="BYOD" tags="policy" position="1400,975" size="100,100">check: check + 1
+circle (check ==1): circle + 1
+money (check ==1): money - 1
 randomEvent: Math.floor(Math.random() * 4) + 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
@@ -1367,7 +1369,8 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 [continue]
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="CLOSED-LOOP LAW" tags="policy" position="1300,1800" size="100,100">circle: circle + 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="CLOSED-LOOP LAW" tags="policy" position="1300,1800" size="100,100">check: check + 1
+circle (check ==1): circle + 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;policies.closedLoopLaw.title&quot;}
@@ -1386,9 +1389,10 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 [continue]
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="CONSUMPTION LIMIT" tags="policy" position="1525,1525" size="100,100">happy: happy - 2
-circle: circle + 2
-money: money - 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="CONSUMPTION LIMIT" tags="policy" position="1525,1525" size="100,100">check: check + 1
+happy (check ==1): happy - 2
+circle (check ==1): circle + 2
+money (check ==1): money - 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;policies.consumptionLimit.title&quot;}
@@ -1409,7 +1413,8 @@ money: money - 1
 
 [continue]
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="DON&#39;T PHONE AND DRIVE" tags="policy" position="1400,1250" size="100,100">happy: happy - 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="DON&#39;T PHONE AND DRIVE" tags="policy" position="1400,1250" size="100,100">check: check + 1
+happy (check ==1): happy - 1
 randomEvent: Math.floor(Math.random() * 4) + 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
@@ -1437,9 +1442,10 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 [continue]
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="EXTREME ECO-TAX" tags="policy" position="1400,475" size="100,100">happy: happy - 2
-circle: circle + 2
-money: money + 2
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="EXTREME ECO-TAX" tags="policy" position="1400,475" size="100,100">check: check + 1
+happy (check ==1): happy - 2
+circle (check ==1): circle + 2
+money (check ==1): money + 2
 randomEvent: Math.floor(Math.random() * 4) + 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
@@ -1624,7 +1630,9 @@ ui.footerCenter: &quot;&quot;
 &lt;div class=&quot;passage-navigation&quot;&gt;
 {translated link: &quot;common.back&quot;, to: &#39;[[Continue-&gt;End5]]&#39;, role: &quot;continue&quot;}    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;End7]]&#39;, role: &quot;continue&quot;}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="FEAR OF DATA THEFT" tags="event" position="2075,1250" size="100,100">{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="FEAR OF DATA THEFT" tags="event" position="2075,1250" size="100,100">check: 0
+--
+{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
 &lt;span class=&quot;passage-title&quot;&gt;{translate text: &quot;events.fearOfDataTheft.title&quot;}&lt;/span&gt;
 
 {translate text: &quot;events.fearOfDataTheft.description&quot;}
@@ -1633,8 +1641,9 @@ ui.footerCenter: &quot;&quot;
 
 &lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.fearOfDataTheft.outcomes.doNothing.title&quot;, to: &#39;[[FEAR OF DATA THEFT - DO NOTHING]]&#39;}&lt;/span&gt;
 
-&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.fearOfDataTheft.outcomes.launchInformationCampaign.title&quot;, to: &#39;[[FEAR OF DATA THEFT - LAUNCH INFORMATION CAMPAIGN]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="15" name="FEAR OF DATA THEFT - DO NOTHING" tags="event" position="2100,1375" size="100,100">circle: Math.max(0, circle - 1)
-happy: happy - 1
+&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.fearOfDataTheft.outcomes.launchInformationCampaign.title&quot;, to: &#39;[[FEAR OF DATA THEFT - LAUNCH INFORMATION CAMPAIGN]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="15" name="FEAR OF DATA THEFT - DO NOTHING" tags="event" position="2100,1375" size="100,100">check: check + 1
+circle (check ==1): Math.max(0, circle - 1)
+happy (check ==1): happy - 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.fearOfDataTheft.outcomes.doNothing.description&quot;}
@@ -1648,9 +1657,10 @@ happy: happy - 1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round5]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="FEAR OF DATA THEFT - LAUNCH INFORMATION CAMPAIGN" tags="event" position="2225,1375" size="100,100">circle: circle + 1
-happy: happy + 1
-money: money -1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="FEAR OF DATA THEFT - LAUNCH INFORMATION CAMPAIGN" tags="event" position="2225,1375" size="100,100">check: check + 1
+circle (check ==1): circle + 1
+happy (check ==1): happy + 1
+money (check ==1): money -1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.fearOfDataTheft.outcomes.launchInformationCampaign.description&quot;}
@@ -1666,7 +1676,9 @@ money: money -1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round5]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="FIRE AT RECYCLING PLANT" tags="event" position="1725,475" size="100,100">{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="FIRE AT RECYCLING PLANT" tags="event" position="1725,475" size="100,100">check: 0
+--
+{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
 &lt;span class=&quot;passage-title&quot;&gt;{translate text: &quot;events.fireAtRecyclingPlant.title&quot;}&lt;/span&gt;
 
 {translate text: &quot;events.fireAtRecyclingPlant.description&quot;}
@@ -1675,7 +1687,8 @@ money: money -1
 
 &lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.fireAtRecyclingPlant.outcomes.putOutFire.title&quot;, to: &#39;[[FIRE AT RECYCLING PLANT - PUT OUT FIRE]]&#39;}&lt;/span&gt;
 
-&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.fireAtRecyclingPlant.outcomes.doNothing.title&quot;, to: &#39;[[FIRE AT RECYCLING PLANT - DO NOTHING]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="18" name="FIRE AT RECYCLING PLANT - DO NOTHING" tags="event" position="1850,600" size="100,100">circle: Math.max(0, circle - 1)
+&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.fireAtRecyclingPlant.outcomes.doNothing.title&quot;, to: &#39;[[FIRE AT RECYCLING PLANT - DO NOTHING]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="18" name="FIRE AT RECYCLING PLANT - DO NOTHING" tags="event" position="1850,600" size="100,100">check: check + 1
+circle (check ==1): Math.max(0, circle - 1)
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.fireAtRecyclingPlant.outcomes.doNothing.description&quot;}
@@ -1687,7 +1700,8 @@ money: money -1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round2]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="FIRE AT RECYCLING PLANT - PUT OUT FIRE" tags="event" position="1725,600" size="100,100">money: money - 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="FIRE AT RECYCLING PLANT - PUT OUT FIRE" tags="event" position="1725,600" size="100,100">check: check + 1
+money (check ==1): money - 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.fireAtRecyclingPlant.outcomes.putOutFire.description&quot;}
@@ -1701,7 +1715,9 @@ money: money -1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round2]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="GLOBAL CHIP CRISIS" tags="event" position="2375,975" size="100,100">{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="GLOBAL CHIP CRISIS" tags="event" position="2375,975" size="100,100">check: 0
+--
+{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
 &lt;span class=&quot;passage-title&quot;&gt;{translate text: &quot;events.globalChipCrisis.title&quot;}&lt;/span&gt;
 
 {translate text: &quot;events.globalChipCrisis.description&quot;}
@@ -1710,7 +1726,8 @@ money: money -1
 
 &lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.globalChipCrisis.outcomes.supportRepairAndReuse.title&quot;, to: &#39;[[GLOBAL CHIP CRISIS - SUPPORT REPAIR AND REUSE]]&#39;}&lt;/span&gt;
 
-&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.globalChipCrisis.outcomes.subsidizePhonePurchases.title&quot;, to: &#39;[[GLOBAL CHIP CRISIS - SUBSIDIZE PHONE PURCHASES]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="21" name="GLOBAL CHIP CRISIS - SUBSIDIZE PHONE PURCHASES" tags="event" position="2500,1100" size="100,100">money: Math.max(0, money - 2)
+&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.globalChipCrisis.outcomes.subsidizePhonePurchases.title&quot;, to: &#39;[[GLOBAL CHIP CRISIS - SUBSIDIZE PHONE PURCHASES]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="21" name="GLOBAL CHIP CRISIS - SUBSIDIZE PHONE PURCHASES" tags="event" position="2500,1100" size="100,100">check: check + 1
+money (check ==1): Math.max(0, money - 2)
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.globalChipCrisis.outcomes.subsidizePhonePurchases.description&quot;}
@@ -1724,9 +1741,10 @@ money: money -1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round4]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="GLOBAL CHIP CRISIS - SUPPORT REPAIR AND REUSE" tags="event" position="2375,1100" size="100,100">happy: happy - 1
-circle: circle + 2
-money: money -1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="GLOBAL CHIP CRISIS - SUPPORT REPAIR AND REUSE" tags="event" position="2375,1100" size="100,100">check: check + 1
+happy (check ==1): happy - 1
+circle (check ==1): circle + 2
+money (check ==1): money -1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.globalChipCrisis.outcomes.supportRepairAndReuse.description&quot;}
@@ -1742,7 +1760,9 @@ money: money -1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round4]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="GLOBAL RECESSION" tags="event" position="2375,1250" size="100,100">{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="GLOBAL RECESSION" tags="event" position="2375,1250" size="100,100">check: 0
+--
+{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
 &lt;span class=&quot;passage-title&quot;&gt;{translate text: &quot;events.globalRecession.title&quot;}&lt;/span&gt;
 
 {translate text: &quot;events.globalRecession.description&quot;}
@@ -1751,8 +1771,9 @@ money: money -1
 
 &lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.globalRecession.outcomes.supportCircularSolutions.title&quot;, to: &#39;[[GLOBAL RECESSION - SUPPORT CIRCULAR SOLUTIONS]]&#39;}&lt;/span&gt;
 
-&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.globalRecession.outcomes.supportPhonePurchases.title&quot;, to: &#39;[[GLOBAL RECESSION - SUPPORT PHONE PURCHASES]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="24" name="GLOBAL RECESSION - SUPPORT CIRCULAR SOLUTIONS" tags="event" position="2375,1375" size="100,100">circle: circle + 2
-money: money - 1
+&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.globalRecession.outcomes.supportPhonePurchases.title&quot;, to: &#39;[[GLOBAL RECESSION - SUPPORT PHONE PURCHASES]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="24" name="GLOBAL RECESSION - SUPPORT CIRCULAR SOLUTIONS" tags="event" position="2375,1375" size="100,100">check: check + 1
+circle (check ==1): circle + 2
+money (check ==1): money - 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.globalRecession.outcomes.supportCircularSolutions.description&quot;}
@@ -1768,7 +1789,8 @@ money: money - 1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round5]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="GLOBAL RECESSION - SUPPORT PHONE PURCHASES" tags="event" position="2500,1375" size="100,100">money: money - 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="GLOBAL RECESSION - SUPPORT PHONE PURCHASES" tags="event" position="2500,1375" size="100,100">check: check + 1
+money (check ==1): money - 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.globalRecession.outcomes.supportPhonePurchases.description&quot;}
@@ -1804,8 +1826,9 @@ ui.mode: &quot;game-over&quot;
 
 {translate text: &quot;end.gameOver2.text1&quot;}&lt;br&gt;
 &lt;span class=&quot;game-over-label&quot;&gt;{translate text: &quot;end.gameOver2.label&quot;}&lt;/span&gt;
-&lt;img src=&quot;images/dead.webp&quot; class=&quot;game-over-icon&quot;&gt;</tw-passagedata><tw-passagedata pid="28" name="LIMIT ONLINE FOOTPRINT" tags="policy" position="1425,1800" size="100,100">happy: happy - 1
-circle: circle + 1
+&lt;img src=&quot;images/dead.webp&quot; class=&quot;game-over-icon&quot;&gt;</tw-passagedata><tw-passagedata pid="28" name="LIMIT ONLINE FOOTPRINT" tags="policy" position="1425,1800" size="100,100">check: check + 1
+happy (check ==1): happy - 1
+circle (check ==1): circle + 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;policies.limitOnlineFootprint.title&quot;}
@@ -1824,8 +1847,9 @@ circle: circle + 1
 
 [continue]
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="LOW-ORBIT SIGNAL MESH" tags="technology" position="1100,850" size="100,100">happy: happy +1
-tech: tech -1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="LOW-ORBIT SIGNAL MESH" tags="technology" position="1100,850" size="100,100">check: check + 1
+happy (check ==1): happy +1
+tech (check ==1): tech -1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;technologies.lowOrbitSignalMesh.title&quot;}
@@ -1837,9 +1861,10 @@ tech: tech -1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round3]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="MAGNETIC BREAK-APART" tags="technology" position="975,850" size="100,100">happy: happy +1
-circle: circle + 1
-tech: tech -1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="MAGNETIC BREAK-APART" tags="technology" position="975,850" size="100,100">check: check + 1
+happy (check ==1): happy +1
+circle (check ==1): circle + 1
+tech (check ==1): tech -1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;technologies.magneticBreakApart.title&quot;}
@@ -1853,7 +1878,9 @@ tech: tech -1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round3]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="MINIMALIST TECH MOVEMENT" tags="event" position="2325,475" size="100,100">{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="MINIMALIST TECH MOVEMENT" tags="event" position="2325,475" size="100,100">check: 0
+--
+{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
 &lt;span class=&quot;passage-title&quot;&gt;{translate text: &quot;events.minimalistTechMovement.title&quot;}&lt;/span&gt;
 
 {translate text: &quot;events.minimalistTechMovement.description&quot;}
@@ -1862,7 +1889,8 @@ tech: tech -1
 
 &lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.minimalistTechMovement.outcomes.encourageSpending.title&quot;, to: &#39;[[MINIMALIST TECH MOVEMENT - ENCOURAGE SPENDING]]&#39;}&lt;/span&gt;
 
-&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.minimalistTechMovement.outcomes.promoteMinimalism.title&quot;, to: &#39;[[MINIMALIST TECH MOVEMENT - PROMOTE MINIMALISM]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="32" name="MINIMALIST TECH MOVEMENT - ENCOURAGE SPENDING" tags="event" position="2325,600" size="100,100">money: money - 1
+&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.minimalistTechMovement.outcomes.promoteMinimalism.title&quot;, to: &#39;[[MINIMALIST TECH MOVEMENT - PROMOTE MINIMALISM]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="32" name="MINIMALIST TECH MOVEMENT - ENCOURAGE SPENDING" tags="event" position="2325,600" size="100,100">check: check + 1
+money (check ==1): money - 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.minimalistTechMovement.outcomes.encourageSpending.description&quot;}
@@ -1876,8 +1904,9 @@ tech: tech -1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round2]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="MINIMALIST TECH MOVEMENT - PROMOTE MINIMALISM" tags="event" position="2450,600" size="100,100">circle: circle + 1
-money: money - 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="MINIMALIST TECH MOVEMENT - PROMOTE MINIMALISM" tags="event" position="2450,600" size="100,100">check: check + 1
+circle (check ==1): circle + 1
+money (check ==1): money - 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.minimalistTechMovement.outcomes.promoteMinimalism.description&quot;}
@@ -1891,7 +1920,8 @@ money: money - 1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round2]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="34" name="MOBILE DETOX DAY" tags="policy" position="1525,475" size="100,100">circle: circle + 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="34" name="MOBILE DETOX DAY" tags="policy" position="1525,475" size="100,100">check: check + 1
+circle (check ==1): circle + 1
 randomEvent: Math.floor(Math.random() * 4) + 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
@@ -1917,9 +1947,10 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 [continue]
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="MODULAR SMARTPHONE" tags="technology" position="850,2125" size="100,100">happy: happy +1
-circle: circle +2
-tech: tech -1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="MODULAR SMARTPHONE" tags="technology" position="850,2125" size="100,100">check: check + 1
+happy (check ==1): happy +1
+circle (check ==1): circle +2
+tech (check ==1): tech -1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;technologies.modularSmartphone.title&quot;}
@@ -1933,7 +1964,9 @@ tech: tech -1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;End1]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="NEW PINEAPPLE PHONE" tags="event" position="1800,975" size="100,100">{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="NEW PINEAPPLE PHONE" tags="event" position="1800,975" size="100,100">check: 0
+--
+{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
 &lt;span class=&quot;passage-title&quot;&gt;{translate text: &quot;events.newPineapplePhone.title&quot;}&lt;/span&gt;
 
 {translate text: &quot;events.newPineapplePhone.description&quot;}
@@ -1942,9 +1975,10 @@ tech: tech -1
 
 &lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.newPineapplePhone.outcomes.doNothing.title&quot;, to: &#39;[[NEW PINEAPPLE PHONE - DO NOTHING]]&#39;}&lt;/span&gt;
 
-&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.newPineapplePhone.outcomes.promoteLongerPhoneUse.title&quot;, to: &#39;[[NEW PINEAPPLE PHONE - PROMOTE LONGER PHONE USE]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="37" name="NEW PINEAPPLE PHONE - DO NOTHING" tags="event" position="1800,1100" size="100,100">happy: happy + 1
-circle: Math.max(0, circle - 1)
-money: money + 1
+&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.newPineapplePhone.outcomes.promoteLongerPhoneUse.title&quot;, to: &#39;[[NEW PINEAPPLE PHONE - PROMOTE LONGER PHONE USE]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="37" name="NEW PINEAPPLE PHONE - DO NOTHING" tags="event" position="1800,1100" size="100,100">check: check + 1
+happy (check ==1): happy + 1
+circle (check ==1): Math.max(0, circle - 1)
+money (check ==1): money + 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.newPineapplePhone.outcomes.doNothing.description&quot;}
@@ -1960,7 +1994,8 @@ money: money + 1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round4]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="38" name="NEW PINEAPPLE PHONE - PROMOTE LONGER PHONE USE" tags="event" position="1950,1100" size="100,100">happy: happy - 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="38" name="NEW PINEAPPLE PHONE - PROMOTE LONGER PHONE USE" tags="event" position="1950,1100" size="100,100">check: check + 1
+happy (check ==1): happy - 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.newPineapplePhone.outcomes.promoteLongerPhoneUse.description&quot;}
@@ -1974,9 +2009,10 @@ money: money + 1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round4]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="NEW SELF-CHARGING BATTERY" tags="technology" position="1000,2125" size="100,100">happy: happy +1
-tech: tech -1
-money: money + 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="NEW SELF-CHARGING BATTERY" tags="technology" position="1000,2125" size="100,100">check: check + 1
+happy (check ==1): happy +1
+tech (check ==1): tech -1
+money (check ==1): money + 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;technologies.newSelfChargingBattery.title&quot;}
@@ -1990,9 +2026,10 @@ money: money + 1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;End1]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="NEW TRIPLE-DIAMOND GLASS" tags="technology" position="850,850" size="100,100">happy: happy +2
-circle: circle + 1
-tech: tech -1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="NEW TRIPLE-DIAMOND GLASS" tags="technology" position="850,850" size="100,100">check: check + 1
+happy (check ==1): happy +2
+circle (check ==1): circle + 1
+tech (check ==1): tech -1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;technologies.newTripleDiamondGlass.title&quot;}
@@ -2006,8 +2043,9 @@ tech: tech -1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round3]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="NO EXPLOITATIVE FEATURES" tags="policy" position="1400,1525" size="100,100">happy: happy + 1
-circle: circle + 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="NO EXPLOITATIVE FEATURES" tags="policy" position="1400,1525" size="100,100">check: check + 1
+happy (check ==1): happy + 1
+circle (check ==1): circle + 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;policies.noExploitativeFeatures.title&quot;}
@@ -2030,7 +2068,9 @@ circle: circle + 1
 
 &lt;img src=&quot;images/tech3.webp&quot; class=&quot;story-illustration&quot;&gt;
 
-{translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;NewTech1a]]&#39;, role: &quot;continue&quot;}</tw-passagedata><tw-passagedata pid="43" name="NewTech1a" tags="technology prose" position="925,700" size="100,100">{translate text: &quot;techRounds.newTech1a.text1&quot;}
+{translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;NewTech1a]]&#39;, role: &quot;continue&quot;}</tw-passagedata><tw-passagedata pid="43" name="NewTech1a" tags="technology prose" position="925,700" size="100,100">check: 0
+--
+{translate text: &quot;techRounds.newTech1a.text1&quot;}
 
 &lt;span class=&quot;tech&quot;&gt;{translated link: &quot;technologies.magneticBreakApart.title&quot;, to: &#39;[[MAGNETIC BREAK-APART]]&#39;}&lt;/span&gt;
 ({translate text: &quot;technologies.magneticBreakApart.description&quot;})
@@ -2043,7 +2083,9 @@ circle: circle + 1
 
 &lt;img src=&quot;images/tech2.webp&quot; class=&quot;story-illustration&quot;&gt;
 
-{translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;NewTech2a]]&#39;, role: &quot;continue&quot;}</tw-passagedata><tw-passagedata pid="45" name="NewTech2a" tags="technology prose" position="975,1575" size="100,100">{translate text: &quot;techRounds.newTech2a.text1&quot;}
+{translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;NewTech2a]]&#39;, role: &quot;continue&quot;}</tw-passagedata><tw-passagedata pid="45" name="NewTech2a" tags="technology prose" position="975,1575" size="100,100">check: 0
+--
+{translate text: &quot;techRounds.newTech2a.text1&quot;}
 
 &lt;span class=&quot;tech&quot;&gt;{translated link: &quot;technologies.smartBins.title&quot;, to: &#39;[[SMART BINS]]&#39;}&lt;/span&gt;
 ({translate text: &quot;technologies.smartBins.description&quot;})
@@ -2056,7 +2098,9 @@ circle: circle + 1
 
 &lt;img src=&quot;images/tech1.webp&quot; class=&quot;story-illustration&quot;&gt;
 
-{translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;NewTech3a]]&#39;, role: &quot;continue&quot;}</tw-passagedata><tw-passagedata pid="47" name="NewTech3a" tags="technology prose" position="850,1925" size="100,100">{translate text: &quot;techRounds.newTech3a.text1&quot;}
+{translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;NewTech3a]]&#39;, role: &quot;continue&quot;}</tw-passagedata><tw-passagedata pid="47" name="NewTech3a" tags="technology prose" position="850,1925" size="100,100">check: 0
+--
+{translate text: &quot;techRounds.newTech3a.text1&quot;}
 
 &lt;span class=&quot;tech&quot;&gt;{translated link: &quot;technologies.modularSmartphone.title&quot;, to: &#39;[[MODULAR SMARTPHONE]]&#39;}&lt;/span&gt;
 ({translate text: &quot;technologies.modularSmartphone.description&quot;})
@@ -2065,9 +2109,10 @@ circle: circle + 1
 ({translate text: &quot;technologies.newSelfChargingBattery.description&quot;})
 
 &lt;span class=&quot;tech&quot;&gt;{translated link: &quot;technologies.smartShattering.title&quot;, to: &#39;[[SMART-SHATTERING]]&#39;}&lt;/span&gt;
-({translate text: &quot;technologies.smartShattering.description&quot;})</tw-passagedata><tw-passagedata pid="48" name="ONE-PHONE LAW" tags="policy" position="1275,725" size="100,100">happy: happy - 2
-circle: circle + 1
-money: money - 1
+({translate text: &quot;technologies.smartShattering.description&quot;})</tw-passagedata><tw-passagedata pid="48" name="ONE-PHONE LAW" tags="policy" position="1275,725" size="100,100">check: check + 1
+happy (check ==1): happy - 2
+circle (check ==1): circle + 1
+money (check ==1): money - 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;policies.onePhoneLaw.title&quot;}
@@ -2088,7 +2133,9 @@ money: money - 1
 
 [continue]
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="PHONE PRICE DROP" tags="event" position="2075,975" size="100,100">{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="PHONE PRICE DROP" tags="event" position="2075,975" size="100,100">check: 0
+--
+{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
 &lt;span class=&quot;passage-title&quot;&gt;{translate text: &quot;events.phonePriceDrop.title&quot;}&lt;/span&gt;
 
 {translate text: &quot;events.phonePriceDrop.description&quot;}
@@ -2097,9 +2144,10 @@ money: money - 1
 
 &lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.phonePriceDrop.outcomes.doNothing.title&quot;, to: &#39;[[PHONE PRICE DROP - DO NOTHING]]&#39;}&lt;/span&gt;
 
-&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.phonePriceDrop.outcomes.protectRepairAndReuse.title&quot;, to: &#39;[[PHONE PRICE DROP - PROTECT REPAIR AND REUSE]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="50" name="PHONE PRICE DROP - DO NOTHING" tags="event" position="2075,1100" size="100,100">happy: happy + 1
-circle: Math.max(0, circle - 1)
-money: money - 1
+&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.phonePriceDrop.outcomes.protectRepairAndReuse.title&quot;, to: &#39;[[PHONE PRICE DROP - PROTECT REPAIR AND REUSE]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="50" name="PHONE PRICE DROP - DO NOTHING" tags="event" position="2075,1100" size="100,100">check: check + 1
+happy (check ==1): happy + 1
+circle (check ==1): Math.max(0, circle - 1)
+money (check ==1): money - 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.phonePriceDrop.outcomes.doNothing.description&quot;}
@@ -2115,8 +2163,9 @@ money: money - 1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round4]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="PHONE PRICE DROP - PROTECT REPAIR AND REUSE" tags="event" position="2200,1100" size="100,100">happy: happy - 1
-money: money + 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="PHONE PRICE DROP - PROTECT REPAIR AND REUSE" tags="event" position="2200,1100" size="100,100">check: check + 1
+happy (check ==1): happy - 1
+money (check ==1): money + 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.phonePriceDrop.outcomes.protectRepairAndReuse.description&quot;}
@@ -2132,9 +2181,10 @@ money: money + 1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round4]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="PHONE SUBSCRIPTION" tags="policy" position="1525,725" size="100,100">happy: happy + 1
-circle: Math.max(0, circle - 2)
-money: money +1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="PHONE SUBSCRIPTION" tags="policy" position="1525,725" size="100,100">check: check + 1
+happy (check ==1): happy + 1
+circle (check ==1): Math.max(0, circle - 2)
+money (check ==1): money +1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;policies.phoneSubscription.title&quot;}
@@ -2156,8 +2206,9 @@ money: money +1
 
 [continue]
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="RECYCLE BONUS" tags="policy" position="1275,1250" size="100,100">happy: happy + 1
-circle: Math.max(0, circle - 1)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="RECYCLE BONUS" tags="policy" position="1275,1250" size="100,100">check: check + 1
+happy (check ==1): happy + 1
+circle (check ==1): Math.max(0, circle - 1)
 randomEvent: Math.floor(Math.random() * 4) + 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
@@ -2183,9 +2234,10 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 [continue]
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="REGENERATIVE PORT MATRIX" tags="technology" position="1125,1700" size="100,100">happy: happy +1
-circle: circle + 1
-tech: tech -1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="REGENERATIVE PORT MATRIX" tags="technology" position="1125,1700" size="100,100">check: check + 1
+happy (check ==1): happy +1
+circle (check ==1): circle + 1
+tech (check ==1): tech -1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;technologies.regenerativePortMatrix.title&quot;}
@@ -2199,7 +2251,9 @@ tech: tech -1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round6]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="REPAIR PARTS MARKET COLLAPSE" tags="event" position="2050,475" size="100,100">{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="REPAIR PARTS MARKET COLLAPSE" tags="event" position="2050,475" size="100,100">check: 0
+--
+{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
 &lt;span class=&quot;passage-title&quot;&gt;{translate text: &quot;events.repairPartsMarketCollapse.title&quot;}&lt;/span&gt;
 
 {translate text: &quot;events.repairPartsMarketCollapse.description&quot;}
@@ -2208,8 +2262,9 @@ tech: tech -1
 
 &lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.repairPartsMarketCollapse.outcomes.doNothing.title&quot;, to: &#39;[[REPAIR PARTS MARKET COLLAPSE - DO NOTHING]]&#39;}&lt;/span&gt;
 
-&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.repairPartsMarketCollapse.outcomes.provideFinancialSupport.title&quot;, to: &#39;[[REPAIR PARTS MARKET COLLAPSE - PROVIDE FINANCIAL SUPPORT]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="56" name="REPAIR PARTS MARKET COLLAPSE - DO NOTHING" tags="event" position="2175,600" size="100,100">circle: Math.max(0, circle - 1)
-happy: happy - 1
+&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.repairPartsMarketCollapse.outcomes.provideFinancialSupport.title&quot;, to: &#39;[[REPAIR PARTS MARKET COLLAPSE - PROVIDE FINANCIAL SUPPORT]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="56" name="REPAIR PARTS MARKET COLLAPSE - DO NOTHING" tags="event" position="2175,600" size="100,100">check: check + 1
+circle (check ==1): Math.max(0, circle - 1)
+happy (check ==1): happy - 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.repairPartsMarketCollapse.outcomes.doNothing.description&quot;}
@@ -2223,7 +2278,8 @@ happy: happy - 1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round2]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="REPAIR PARTS MARKET COLLAPSE - PROVIDE FINANCIAL SUPPORT" tags="event" position="2050,600" size="100,100">money: money - 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="REPAIR PARTS MARKET COLLAPSE - PROVIDE FINANCIAL SUPPORT" tags="event" position="2050,600" size="100,100">check: check + 1
+money (check ==1): money - 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.repairPartsMarketCollapse.outcomes.provideFinancialSupport.description&quot;}
@@ -2237,8 +2293,9 @@ happy: happy - 1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round2]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="RETURN DEPOSIT" tags="policy" position="1275,475" size="100,100">happy: happy - 1
-circle: circle + 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="RETURN DEPOSIT" tags="policy" position="1275,475" size="100,100">check: check + 1
+happy (check ==1): happy - 1
+circle (check ==1: circle + 1
 randomEvent: Math.floor(Math.random() * 4) + 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
@@ -2265,6 +2322,7 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 [continue]
 {game over override}
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="Round1" tags="round" position="1400,350" size="100,100">ui.round: 1
+check: 0
 --
 
 {translate text: &quot;rounds.round1.text1&quot;}
@@ -2277,6 +2335,7 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 &lt;span class=&quot;policy&quot;&gt;{translated link: &quot;policies.returnDeposit.title&quot;, to: &#39;[[RETURN DEPOSIT]]&#39;}&lt;/span&gt;
 ({translate text: &quot;policies.returnDeposit.description&quot;})</tw-passagedata><tw-passagedata pid="60" name="Round2" tags="round" position="1400,600" size="100,100">ui.round: 2
+check: 0
 --
 
 {translate text: &quot;rounds.round2.text1&quot;}
@@ -2289,6 +2348,7 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 &lt;span class=&quot;policy&quot;&gt;{translated link: &quot;policies.onePhoneLaw.title&quot;, to: &#39;[[ONE-PHONE LAW]]&#39;}&lt;/span&gt;
 ({translate text: &quot;policies.onePhoneLaw.description&quot;})</tw-passagedata><tw-passagedata pid="61" name="Round3" tags="round" position="1400,850" size="100,100">ui.round: 3
+check: 0
 --
 
 {translate text: &quot;rounds.round3.text1&quot;}
@@ -2301,6 +2361,7 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 &lt;span class=&quot;policy&quot;&gt;{translated link: &quot;policies.serviceContract.title&quot;, to: &#39;[[SERVICE CONTRACT]]&#39;}&lt;/span&gt;
 ({translate text: &quot;policies.serviceContract.description&quot;})</tw-passagedata><tw-passagedata pid="62" name="Round4" tags="round" position="1400,1125" size="100,100">ui.round: 4
+check: 0
 --
 
 {translate text: &quot;rounds.round4.text1&quot;}
@@ -2313,6 +2374,7 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 &lt;span class=&quot;policy&quot;&gt;{translated link: &quot;policies.recycleBonus.title&quot;, to: &#39;[[RECYCLE BONUS]]&#39;}&lt;/span&gt;
 ({translate text: &quot;policies.recycleBonus.description&quot;})</tw-passagedata><tw-passagedata pid="63" name="Round5" tags="round" position="1400,1400" size="100,100">ui.round: 5
+check: 0
 --
 
 {translate text: &quot;rounds.round5.text1&quot;}
@@ -2325,6 +2387,7 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 &lt;span class=&quot;policy&quot;&gt;{translated link: &quot;policies.bioPhone.title&quot;, to: &#39;[[BIO PHONE]]&#39;}&lt;/span&gt;
 ({translate text: &quot;policies.bioPhone.description&quot;})</tw-passagedata><tw-passagedata pid="64" name="Round6" tags="round" position="1400,1650" size="100,100">ui.round: 6
+check: 0
 --
 
 {translate text: &quot;rounds.round6.text1&quot;}
@@ -2336,7 +2399,8 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 ({translate text: &quot;policies.unlock.description&quot;})
 
 &lt;span class=&quot;policy&quot;&gt;{translated link: &quot;policies.closedLoopLaw.title&quot;, to: &#39;[[CLOSED-LOOP LAW]]&#39;}&lt;/span&gt;
-({translate text: &quot;policies.closedLoopLaw.description&quot;})</tw-passagedata><tw-passagedata pid="65" name="SCHOOL REPAIR CAFÉ" tags="policy" position="1400,725" size="100,100">circle: circle + 1
+({translate text: &quot;policies.closedLoopLaw.description&quot;})</tw-passagedata><tw-passagedata pid="65" name="SCHOOL REPAIR CAFÉ" tags="policy" position="1400,725" size="100,100">check: check + 1
+circle (check ==1): circle + 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;policies.schoolRepairCafe.title&quot;}
@@ -2353,8 +2417,9 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 [continue]
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="SELF-DESTRUCT" tags="technology" position="875,1700" size="100,100">happy: happy +1
-tech: tech -1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="SELF-DESTRUCT" tags="technology" position="875,1700" size="100,100">check: check + 1
+happy (check ==1): happy +1
+tech (check ==1): tech -1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;technologies.selfDestruct.title&quot;}
@@ -2366,8 +2431,9 @@ tech: tech -1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round6]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="67" name="SERVICE CONTRACT" tags="policy" position="1275,975" size="100,100">happy: happy + 1
-circle: circle + 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="67" name="SERVICE CONTRACT" tags="policy" position="1275,975" size="100,100">check: check + 1
+happy (check ==1): happy + 1
+circle (check ==1): circle + 1
 randomEvent: Math.floor(Math.random() * 4) + 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
@@ -2395,8 +2461,9 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 [continue]
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="SMART BINS" tags="technology" position="1000,1700" size="100,100">circle: circle + 1
-tech: tech -1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="SMART BINS" tags="technology" position="1000,1700" size="100,100">check: check + 1
+circle (check ==1): circle + 1
+tech (check ==1): tech -1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;technologies.smartBins.title&quot;}
@@ -2408,8 +2475,9 @@ tech: tech -1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round6]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="SMART-SHATTERING" tags="technology" position="700,2125" size="100,100">circle: circle +1
-tech: tech -1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="SMART-SHATTERING" tags="technology" position="700,2125" size="100,100">check: check + 1
+circle (check ==1): circle +1
+tech (check ==1): tech -1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;technologies.smartShattering.title&quot;}
@@ -2421,7 +2489,8 @@ tech: tech -1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;End1]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="SUSTAINABLE DEVICES ACT" tags="policy" position="1525,1250" size="100,100">circle: circle + 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="SUSTAINABLE DEVICES ACT" tags="policy" position="1525,1250" size="100,100">check: check + 1
+circle (check ==1): circle + 1
 randomEvent: Math.floor(Math.random() * 4) + 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
@@ -2516,7 +2585,9 @@ ui.mode: &quot;gameplay&quot;
 
 {translate text: &quot;start.start6.text2&quot;}
 
-{translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round1]]&#39;, role: &quot;continue&quot;}</tw-passagedata><tw-passagedata pid="77" name="TOXIC WASTE" tags="event" position="1800,1250" size="100,100">{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
+{translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round1]]&#39;, role: &quot;continue&quot;}</tw-passagedata><tw-passagedata pid="77" name="TOXIC WASTE" tags="event" position="1800,1250" size="100,100">check: 0
+--
+{translate rich text: &quot;common.eventHappens&quot;}&lt;br&gt;
 &lt;span class=&quot;passage-title&quot;&gt;{translate text: &quot;events.toxicWaste.title&quot;}&lt;/span&gt;
 
 {translate text: &quot;events.toxicWaste.description&quot;}
@@ -2525,8 +2596,9 @@ ui.mode: &quot;gameplay&quot;
 
 &lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.toxicWaste.outcomes.continueRecycling.title&quot;, to: &#39;[[TOXIC WASTE - CONTINUE RECYCLING]]&#39;}&lt;/span&gt;
 
-&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.toxicWaste.outcomes.introduceStricterRegulations.title&quot;, to: &#39;[[TOXIC WASTE - INTRODUCE STRICTER REGULATIONS]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="78" name="TOXIC WASTE - CONTINUE RECYCLING" tags="event" position="1800,1375" size="100,100">happy: happy - 1
-money: money - 1
+&lt;span class=&quot;event&quot;&gt;{translated link: &quot;events.toxicWaste.outcomes.introduceStricterRegulations.title&quot;, to: &#39;[[TOXIC WASTE - INTRODUCE STRICTER REGULATIONS]]&#39;}&lt;/span&gt;</tw-passagedata><tw-passagedata pid="78" name="TOXIC WASTE - CONTINUE RECYCLING" tags="event" position="1800,1375" size="100,100">check: check + 1
+happy (check ==1): happy - 1
+money (check ==1): money - 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.toxicWaste.outcomes.continueRecycling.description&quot;}
@@ -2542,7 +2614,8 @@ money: money - 1
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Round5]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="TOXIC WASTE - INTRODUCE STRICTER REGULATIONS" tags="event" position="1925,1375" size="100,100">circle: Math.max(0, circle - 1)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="TOXIC WASTE - INTRODUCE STRICTER REGULATIONS" tags="event" position="1925,1375" size="100,100">check: check + 1
+circle (check ==1): Math.max(0, circle - 1)
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;events.toxicWaste.outcomes.introduceStricterRegulations.description&quot;}
@@ -2602,9 +2675,10 @@ tech: 3
 {translated link: &quot;common.continue&quot;, to: &#39;[[Continue-&gt;Start6]]&#39;, role: &quot;continue&quot;}
 
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="UNLOCK" tags="policy" position="1550,1800" size="100,100">happy: happy + 1
-circle: circle + 1
-money: money -1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="UNLOCK" tags="policy" position="1550,1800" size="100,100">check: check + 1
+happy (check ==1): happy + 1
+circle (check ==1): circle + 1
+money (check ==1): money -1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
 {translate text: &quot;policies.unlock.title&quot;}
@@ -2625,9 +2699,10 @@ money: money -1
 
 [continue]
 {game over override}
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="85" name="YOUTH PROTECTION" tags="policy" position="1525,975" size="100,100">happy: happy - 1
-circle: circle + 1
-money: money - 1
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="85" name="YOUTH PROTECTION" tags="policy" position="1525,975" size="100,100">check: check + 1
+happy (check ==1): happy - 1
+circle (check ==1): circle + 1
+money (check ==1): money - 1
 randomEvent: Math.floor(Math.random() * 4) + 1
 --
 &lt;div class=&quot;passage-title&quot;&gt;
