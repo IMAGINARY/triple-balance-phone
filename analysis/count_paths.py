@@ -105,15 +105,30 @@ class Story:
         self.score_formula = re.sub(r"\(get\('([A-Za-z]+)'\)\s*\?\?\s*0\)",
                                     r"\1", lookup.group(1)).strip()
         expression(self.score_formula, dict.fromkeys(VARIABLES, 0))
+        applied_owners = {}
         for name, body in sections.items():
             if name.startswith("Story"): continue
             assignments = []
             split = re.split(r"^--\s*$", body, maxsplit=1, flags=re.MULTILINE)
             if len(split) == 2:
                 vars_text, body = split
+                # The analyzer counts acyclic playthroughs, never page reloads.
+                # A flag owned by this passage is therefore false on entry.
+                flag = re.findall(r"^applied\.([\w]+): true$", vars_text, re.MULTILINE)
+                if len(flag) > 1: raise ModelError(f"Multiple applied flags in {name}")
+                if flag:
+                    if flag[0] in applied_owners:
+                        raise ModelError(f"Shared applied flag in {name}")
+                    applied_owners[flag[0]] = name
+                    guard = f" (!applied.{flag[0]})"
+                else:
+                    guard = None
                 for line in vars_text.splitlines():
                     line = line.strip()
                     if not line: continue
+                    if line == "applied: {}" and name == self.start: continue
+                    if flag and line == f"applied.{flag[0]}: true": continue
+                    if guard: line = line.replace(guard, "")
                     match = re.fullmatch(r"([\w.]+):\s*(.+)", line)
                     if not match: raise ModelError(f"Unsupported vars line in {name}: {line}")
                     key, value = match.groups()

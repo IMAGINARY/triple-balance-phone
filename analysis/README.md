@@ -205,3 +205,17 @@ IDs. It is populated directly through SVG DOM nodes; SVG markup is not permitted
 inside translation strings or passed through the rich-text insert.
 When horizontal scrolling is needed, the chart initially centers on the score
 marker and recenters after a container resize when a successful score is shown.
+
+## Reload protection
+
+Gameplay effect passages guard assignments with `(!applied.passageKey)` and
+set their own flag afterwards. `Start` resets `applied` to `{}`. The analyzer
+recognizes these guards as first-entry assignments: its gameplay graph must be
+acyclic and every flag must belong to a unique passage, so no counted path
+enters an effect passage twice. Reloads are not additional gameplay choices.
+
+Run the assignment-level reload/restart regression check with:
+
+```sh
+node analysis/test_applied.cjs
+```

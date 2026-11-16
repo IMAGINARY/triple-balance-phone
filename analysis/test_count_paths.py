@@ -25,6 +25,26 @@ def fixture(root, body):
 
 
 class CountingTests(unittest.TestCase):
+    def test_passage_owned_reload_guards_preserve_first_entry_effects(self):
+        with tempfile.TemporaryDirectory() as root:
+            source = fixture(root, ''':: Start
+applied: {}
+money: 5
+--
+[[Policy]]
+:: Policy
+money (!applied.policy): money - 1
+applied.policy: true
+--
+[[End1]]''')
+            story = Story(source)
+            story.order()  # Reject cycles before treating guards as first-entry.
+            state = story.branches('Start', (0, 0, 0, 0, 0))[0][1]
+            self.assertEqual(story.branches('Policy', state)[0][1][2], 4)
+            source.write_text(source.read_text().replace('!applied.policy', '!applied.other'))
+            with self.assertRaises(ModelError):
+                Story(source)
+
     def test_histogram_svg_has_exact_half_point_bins_and_translation_hooks(self):
         svg = ET.fromstring(histogram_svg(Counter({7.5: 2, 8.5: 4})))
         ns = {'s': 'http://www.w3.org/2000/svg'}

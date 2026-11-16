@@ -21,9 +21,9 @@ Triple Balance
 
 
 :: BIO PHONE [policy] {"position":"1275,1525","size":"100,100"}
-check: check + 1
-circle (check ==1): circle + 1
-money (check ==1): money - 1
+circle (!applied.bioPhone): circle + 1
+money (!applied.bioPhone): money - 1
+applied.bioPhone: true
 --
 <div class="passage-title">
 {translate text: "policies.bioPhone.title"}
@@ -46,10 +46,10 @@ money (check ==1): money - 1
 
 
 :: BYOD [policy] {"position":"1400,975","size":"100,100"}
-check: check + 1
-circle (check ==1): circle + 1
-money (check ==1): money - 1
-randomEvent: Math.floor(Math.random() * 4) + 1
+circle (!applied.byod): circle + 1
+money (!applied.byod): money - 1
+randomEvent (!applied.byod): Math.floor(Math.random() * 4) + 1
+applied.byod: true
 --
 <div class="passage-title">
 {translate text: "policies.byod.title"}
@@ -80,8 +80,8 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 
 :: CLOSED-LOOP LAW [policy] {"position":"1300,1800","size":"100,100"}
-check: check + 1
-circle (check ==1): circle + 1
+circle (!applied.closedLoopLaw): circle + 1
+applied.closedLoopLaw: true
 --
 <div class="passage-title">
 {translate text: "policies.closedLoopLaw.title"}
@@ -104,10 +104,10 @@ circle (check ==1): circle + 1
 
 
 :: CONSUMPTION LIMIT [policy] {"position":"1525,1525","size":"100,100"}
-check: check + 1
-happy (check ==1): happy - 2
-circle (check ==1): circle + 2
-money (check ==1): money - 1
+happy (!applied.consumptionLimit): happy - 2
+circle (!applied.consumptionLimit): circle + 2
+money (!applied.consumptionLimit): money - 1
+applied.consumptionLimit: true
 --
 <div class="passage-title">
 {translate text: "policies.consumptionLimit.title"}
@@ -132,9 +132,9 @@ money (check ==1): money - 1
 
 
 :: DON'T PHONE AND DRIVE [policy] {"position":"1400,1250","size":"100,100"}
-check: check + 1
-happy (check ==1): happy - 1
-randomEvent: Math.floor(Math.random() * 4) + 1
+happy (!applied.donTPhoneAndDrive): happy - 1
+randomEvent (!applied.donTPhoneAndDrive): Math.floor(Math.random() * 4) + 1
+applied.donTPhoneAndDrive: true
 --
 <div class="passage-title">
 {translate text: "policies.dontPhoneAndDrive.title"}
@@ -165,11 +165,11 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 
 :: EXTREME ECO-TAX [policy] {"position":"1400,475","size":"100,100"}
-check: check + 1
-happy (check ==1): happy - 2
-circle (check ==1): circle + 2
-money (check ==1): money + 2
-randomEvent: Math.floor(Math.random() * 4) + 1
+happy (!applied.extremeEcoTax): happy - 2
+circle (!applied.extremeEcoTax): circle + 2
+money (!applied.extremeEcoTax): money + 2
+randomEvent (!applied.extremeEcoTax): Math.floor(Math.random() * 4) + 1
+applied.extremeEcoTax: true
 --
 <div class="passage-title">
 {translate text: "policies.extremeEcoTax.title"}
@@ -411,7 +411,6 @@ ui.footerCenter: ""
 
 
 :: FEAR OF DATA THEFT [event] {"position":"2075,1250","size":"100,100"}
-check: 0
 --
 {translate rich text: "common.eventHappens"}<br>
 <span class="passage-title">{translate text: "events.fearOfDataTheft.title"}</span>
@@ -426,9 +425,9 @@ check: 0
 
 
 :: FEAR OF DATA THEFT - DO NOTHING [event] {"position":"2100,1375","size":"100,100"}
-check: check + 1
-circle (check ==1): Math.max(0, circle - 1)
-happy (check ==1): happy - 1
+circle (!applied.fearOfDataTheftDoNothing): Math.max(0, circle - 1)
+happy (!applied.fearOfDataTheftDoNothing): happy - 1
+applied.fearOfDataTheftDoNothing: true
 --
 <div class="passage-title">
 {translate text: "events.fearOfDataTheft.outcomes.doNothing.description"}
@@ -446,10 +445,10 @@ happy (check ==1): happy - 1
 
 
 :: FEAR OF DATA THEFT - LAUNCH INFORMATION CAMPAIGN [event] {"position":"2225,1375","size":"100,100"}
-check: check + 1
-circle (check ==1): circle + 1
-happy (check ==1): happy + 1
-money (check ==1): money -1
+circle (!applied.fearOfDataTheftLaunchInformationCampaign): circle + 1
+happy (!applied.fearOfDataTheftLaunchInformationCampaign): happy + 1
+money (!applied.fearOfDataTheftLaunchInformationCampaign): money -1
+applied.fearOfDataTheftLaunchInformationCampaign: true
 --
 <div class="passage-title">
 {translate text: "events.fearOfDataTheft.outcomes.launchInformationCampaign.description"}
@@ -469,7 +468,6 @@ money (check ==1): money -1
 
 
 :: FIRE AT RECYCLING PLANT [event] {"position":"1725,475","size":"100,100"}
-check: 0
 --
 {translate rich text: "common.eventHappens"}<br>
 <span class="passage-title">{translate text: "events.fireAtRecyclingPlant.title"}</span>
@@ -484,8 +482,8 @@ check: 0
 
 
 :: FIRE AT RECYCLING PLANT - DO NOTHING [event] {"position":"1850,600","size":"100,100"}
-check: check + 1
-circle (check ==1): Math.max(0, circle - 1)
+circle (!applied.fireAtRecyclingPlantDoNothing): Math.max(0, circle - 1)
+applied.fireAtRecyclingPlantDoNothing: true
 --
 <div class="passage-title">
 {translate text: "events.fireAtRecyclingPlant.outcomes.doNothing.description"}
@@ -501,8 +499,8 @@ circle (check ==1): Math.max(0, circle - 1)
 
 
 :: FIRE AT RECYCLING PLANT - PUT OUT FIRE [event] {"position":"1725,600","size":"100,100"}
-check: check + 1
-money (check ==1): money - 1
+money (!applied.fireAtRecyclingPlantPutOutFire): money - 1
+applied.fireAtRecyclingPlantPutOutFire: true
 --
 <div class="passage-title">
 {translate text: "events.fireAtRecyclingPlant.outcomes.putOutFire.description"}
@@ -520,7 +518,6 @@ money (check ==1): money - 1
 
 
 :: GLOBAL CHIP CRISIS [event] {"position":"2375,975","size":"100,100"}
-check: 0
 --
 {translate rich text: "common.eventHappens"}<br>
 <span class="passage-title">{translate text: "events.globalChipCrisis.title"}</span>
@@ -535,8 +532,8 @@ check: 0
 
 
 :: GLOBAL CHIP CRISIS - SUBSIDIZE PHONE PURCHASES [event] {"position":"2500,1100","size":"100,100"}
-check: check + 1
-money (check ==1): Math.max(0, money - 2)
+money (!applied.globalChipCrisisSubsidizePhonePurchases): Math.max(0, money - 2)
+applied.globalChipCrisisSubsidizePhonePurchases: true
 --
 <div class="passage-title">
 {translate text: "events.globalChipCrisis.outcomes.subsidizePhonePurchases.description"}
@@ -554,10 +551,10 @@ money (check ==1): Math.max(0, money - 2)
 
 
 :: GLOBAL CHIP CRISIS - SUPPORT REPAIR AND REUSE [event] {"position":"2375,1100","size":"100,100"}
-check: check + 1
-happy (check ==1): happy - 1
-circle (check ==1): circle + 2
-money (check ==1): money -1
+happy (!applied.globalChipCrisisSupportRepairAndReuse): happy - 1
+circle (!applied.globalChipCrisisSupportRepairAndReuse): circle + 2
+money (!applied.globalChipCrisisSupportRepairAndReuse): money -1
+applied.globalChipCrisisSupportRepairAndReuse: true
 --
 <div class="passage-title">
 {translate text: "events.globalChipCrisis.outcomes.supportRepairAndReuse.description"}
@@ -577,7 +574,6 @@ money (check ==1): money -1
 
 
 :: GLOBAL RECESSION [event] {"position":"2375,1250","size":"100,100"}
-check: 0
 --
 {translate rich text: "common.eventHappens"}<br>
 <span class="passage-title">{translate text: "events.globalRecession.title"}</span>
@@ -592,9 +588,9 @@ check: 0
 
 
 :: GLOBAL RECESSION - SUPPORT CIRCULAR SOLUTIONS [event] {"position":"2375,1375","size":"100,100"}
-check: check + 1
-circle (check ==1): circle + 2
-money (check ==1): money - 1
+circle (!applied.globalRecessionSupportCircularSolutions): circle + 2
+money (!applied.globalRecessionSupportCircularSolutions): money - 1
+applied.globalRecessionSupportCircularSolutions: true
 --
 <div class="passage-title">
 {translate text: "events.globalRecession.outcomes.supportCircularSolutions.description"}
@@ -614,8 +610,8 @@ money (check ==1): money - 1
 
 
 :: GLOBAL RECESSION - SUPPORT PHONE PURCHASES [event] {"position":"2500,1375","size":"100,100"}
-check: check + 1
-money (check ==1): money - 1
+money (!applied.globalRecessionSupportPhonePurchases): money - 1
+applied.globalRecessionSupportPhonePurchases: true
 --
 <div class="passage-title">
 {translate text: "events.globalRecession.outcomes.supportPhonePurchases.description"}
@@ -663,9 +659,9 @@ ui.mode: "game-over"
 
 
 :: LIMIT ONLINE FOOTPRINT [policy] {"position":"1425,1800","size":"100,100"}
-check: check + 1
-happy (check ==1): happy - 1
-circle (check ==1): circle + 1
+happy (!applied.limitOnlineFootprint): happy - 1
+circle (!applied.limitOnlineFootprint): circle + 1
+applied.limitOnlineFootprint: true
 --
 <div class="passage-title">
 {translate text: "policies.limitOnlineFootprint.title"}
@@ -688,9 +684,9 @@ circle (check ==1): circle + 1
 
 
 :: LOW-ORBIT SIGNAL MESH [technology] {"position":"1100,850","size":"100,100"}
-check: check + 1
-happy (check ==1): happy +1
-tech (check ==1): tech -1
+happy (!applied.lowOrbitSignalMesh): happy +1
+tech (!applied.lowOrbitSignalMesh): tech -1
+applied.lowOrbitSignalMesh: true
 --
 <div class="passage-title">
 {translate text: "technologies.lowOrbitSignalMesh.title"}
@@ -706,10 +702,10 @@ tech (check ==1): tech -1
 
 
 :: MAGNETIC BREAK-APART [technology] {"position":"975,850","size":"100,100"}
-check: check + 1
-happy (check ==1): happy +1
-circle (check ==1): circle + 1
-tech (check ==1): tech -1
+happy (!applied.magneticBreakApart): happy +1
+circle (!applied.magneticBreakApart): circle + 1
+tech (!applied.magneticBreakApart): tech -1
+applied.magneticBreakApart: true
 --
 <div class="passage-title">
 {translate text: "technologies.magneticBreakApart.title"}
@@ -727,7 +723,6 @@ tech (check ==1): tech -1
 
 
 :: MINIMALIST TECH MOVEMENT [event] {"position":"2325,475","size":"100,100"}
-check: 0
 --
 {translate rich text: "common.eventHappens"}<br>
 <span class="passage-title">{translate text: "events.minimalistTechMovement.title"}</span>
@@ -742,8 +737,8 @@ check: 0
 
 
 :: MINIMALIST TECH MOVEMENT - ENCOURAGE SPENDING [event] {"position":"2325,600","size":"100,100"}
-check: check + 1
-money (check ==1): money - 1
+money (!applied.minimalistTechMovementEncourageSpending): money - 1
+applied.minimalistTechMovementEncourageSpending: true
 --
 <div class="passage-title">
 {translate text: "events.minimalistTechMovement.outcomes.encourageSpending.description"}
@@ -761,9 +756,9 @@ money (check ==1): money - 1
 
 
 :: MINIMALIST TECH MOVEMENT - PROMOTE MINIMALISM [event] {"position":"2450,600","size":"100,100"}
-check: check + 1
-circle (check ==1): circle + 1
-money (check ==1): money - 1
+circle (!applied.minimalistTechMovementPromoteMinimalism): circle + 1
+money (!applied.minimalistTechMovementPromoteMinimalism): money - 1
+applied.minimalistTechMovementPromoteMinimalism: true
 --
 <div class="passage-title">
 {translate text: "events.minimalistTechMovement.outcomes.promoteMinimalism.description"}
@@ -781,9 +776,9 @@ money (check ==1): money - 1
 
 
 :: MOBILE DETOX DAY [policy] {"position":"1525,475","size":"100,100"}
-check: check + 1
-circle (check ==1): circle + 1
-randomEvent: Math.floor(Math.random() * 4) + 1
+circle (!applied.mobileDetoxDay): circle + 1
+randomEvent (!applied.mobileDetoxDay): Math.floor(Math.random() * 4) + 1
+applied.mobileDetoxDay: true
 --
 <div class="passage-title">
 {translate text: "policies.mobileDetoxDay.title"}
@@ -812,10 +807,10 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 
 :: MODULAR SMARTPHONE [technology] {"position":"850,2125","size":"100,100"}
-check: check + 1
-happy (check ==1): happy +1
-circle (check ==1): circle +2
-tech (check ==1): tech -1
+happy (!applied.modularSmartphone): happy +1
+circle (!applied.modularSmartphone): circle +2
+tech (!applied.modularSmartphone): tech -1
+applied.modularSmartphone: true
 --
 <div class="passage-title">
 {translate text: "technologies.modularSmartphone.title"}
@@ -833,7 +828,6 @@ tech (check ==1): tech -1
 
 
 :: NEW PINEAPPLE PHONE [event] {"position":"1800,975","size":"100,100"}
-check: 0
 --
 {translate rich text: "common.eventHappens"}<br>
 <span class="passage-title">{translate text: "events.newPineapplePhone.title"}</span>
@@ -848,10 +842,10 @@ check: 0
 
 
 :: NEW PINEAPPLE PHONE - DO NOTHING [event] {"position":"1800,1100","size":"100,100"}
-check: check + 1
-happy (check ==1): happy + 1
-circle (check ==1): Math.max(0, circle - 1)
-money (check ==1): money + 1
+happy (!applied.newPineapplePhoneDoNothing): happy + 1
+circle (!applied.newPineapplePhoneDoNothing): Math.max(0, circle - 1)
+money (!applied.newPineapplePhoneDoNothing): money + 1
+applied.newPineapplePhoneDoNothing: true
 --
 <div class="passage-title">
 {translate text: "events.newPineapplePhone.outcomes.doNothing.description"}
@@ -871,8 +865,8 @@ money (check ==1): money + 1
 
 
 :: NEW PINEAPPLE PHONE - PROMOTE LONGER PHONE USE [event] {"position":"1950,1100","size":"100,100"}
-check: check + 1
-happy (check ==1): happy - 1
+happy (!applied.newPineapplePhonePromoteLongerPhoneUse): happy - 1
+applied.newPineapplePhonePromoteLongerPhoneUse: true
 --
 <div class="passage-title">
 {translate text: "events.newPineapplePhone.outcomes.promoteLongerPhoneUse.description"}
@@ -890,10 +884,10 @@ happy (check ==1): happy - 1
 
 
 :: NEW SELF-CHARGING BATTERY [technology] {"position":"1000,2125","size":"100,100"}
-check: check + 1
-happy (check ==1): happy +1
-tech (check ==1): tech -1
-money (check ==1): money + 1
+happy (!applied.newSelfChargingBattery): happy +1
+tech (!applied.newSelfChargingBattery): tech -1
+money (!applied.newSelfChargingBattery): money + 1
+applied.newSelfChargingBattery: true
 --
 <div class="passage-title">
 {translate text: "technologies.newSelfChargingBattery.title"}
@@ -911,10 +905,10 @@ money (check ==1): money + 1
 
 
 :: NEW TRIPLE-DIAMOND GLASS [technology] {"position":"850,850","size":"100,100"}
-check: check + 1
-happy (check ==1): happy +2
-circle (check ==1): circle + 1
-tech (check ==1): tech -1
+happy (!applied.newTripleDiamondGlass): happy +2
+circle (!applied.newTripleDiamondGlass): circle + 1
+tech (!applied.newTripleDiamondGlass): tech -1
+applied.newTripleDiamondGlass: true
 --
 <div class="passage-title">
 {translate text: "technologies.newTripleDiamondGlass.title"}
@@ -932,9 +926,9 @@ tech (check ==1): tech -1
 
 
 :: NO EXPLOITATIVE FEATURES [policy] {"position":"1400,1525","size":"100,100"}
-check: check + 1
-happy (check ==1): happy + 1
-circle (check ==1): circle + 1
+happy (!applied.noExploitativeFeatures): happy + 1
+circle (!applied.noExploitativeFeatures): circle + 1
+applied.noExploitativeFeatures: true
 --
 <div class="passage-title">
 {translate text: "policies.noExploitativeFeatures.title"}
@@ -965,7 +959,6 @@ circle (check ==1): circle + 1
 
 
 :: NewTech1a [technology prose] {"position":"925,700","size":"100,100"}
-check: 0
 --
 {translate text: "techRounds.newTech1a.text1"}
 
@@ -988,7 +981,6 @@ check: 0
 
 
 :: NewTech2a [technology prose] {"position":"975,1575","size":"100,100"}
-check: 0
 --
 {translate text: "techRounds.newTech2a.text1"}
 
@@ -1011,7 +1003,6 @@ check: 0
 
 
 :: NewTech3a [technology prose] {"position":"850,1925","size":"100,100"}
-check: 0
 --
 {translate text: "techRounds.newTech3a.text1"}
 
@@ -1026,10 +1017,10 @@ check: 0
 
 
 :: ONE-PHONE LAW [policy] {"position":"1275,725","size":"100,100"}
-check: check + 1
-happy (check ==1): happy - 2
-circle (check ==1): circle + 1
-money (check ==1): money - 1
+happy (!applied.onePhoneLaw): happy - 2
+circle (!applied.onePhoneLaw): circle + 1
+money (!applied.onePhoneLaw): money - 1
+applied.onePhoneLaw: true
 --
 <div class="passage-title">
 {translate text: "policies.onePhoneLaw.title"}
@@ -1054,7 +1045,6 @@ money (check ==1): money - 1
 
 
 :: PHONE PRICE DROP [event] {"position":"2075,975","size":"100,100"}
-check: 0
 --
 {translate rich text: "common.eventHappens"}<br>
 <span class="passage-title">{translate text: "events.phonePriceDrop.title"}</span>
@@ -1069,10 +1059,10 @@ check: 0
 
 
 :: PHONE PRICE DROP - DO NOTHING [event] {"position":"2075,1100","size":"100,100"}
-check: check + 1
-happy (check ==1): happy + 1
-circle (check ==1): Math.max(0, circle - 1)
-money (check ==1): money - 1
+happy (!applied.phonePriceDropDoNothing): happy + 1
+circle (!applied.phonePriceDropDoNothing): Math.max(0, circle - 1)
+money (!applied.phonePriceDropDoNothing): money - 1
+applied.phonePriceDropDoNothing: true
 --
 <div class="passage-title">
 {translate text: "events.phonePriceDrop.outcomes.doNothing.description"}
@@ -1092,9 +1082,9 @@ money (check ==1): money - 1
 
 
 :: PHONE PRICE DROP - PROTECT REPAIR AND REUSE [event] {"position":"2200,1100","size":"100,100"}
-check: check + 1
-happy (check ==1): happy - 1
-money (check ==1): money + 1
+happy (!applied.phonePriceDropProtectRepairAndReuse): happy - 1
+money (!applied.phonePriceDropProtectRepairAndReuse): money + 1
+applied.phonePriceDropProtectRepairAndReuse: true
 --
 <div class="passage-title">
 {translate text: "events.phonePriceDrop.outcomes.protectRepairAndReuse.description"}
@@ -1114,10 +1104,10 @@ money (check ==1): money + 1
 
 
 :: PHONE SUBSCRIPTION [policy] {"position":"1525,725","size":"100,100"}
-check: check + 1
-happy (check ==1): happy + 1
-circle (check ==1): Math.max(0, circle - 2)
-money (check ==1): money +1
+happy (!applied.phoneSubscription): happy + 1
+circle (!applied.phoneSubscription): Math.max(0, circle - 2)
+money (!applied.phoneSubscription): money +1
+applied.phoneSubscription: true
 --
 <div class="passage-title">
 {translate text: "policies.phoneSubscription.title"}
@@ -1143,10 +1133,10 @@ money (check ==1): money +1
 
 
 :: RECYCLE BONUS [policy] {"position":"1275,1250","size":"100,100"}
-check: check + 1
-happy (check ==1): happy + 1
-circle (check ==1): Math.max(0, circle - 1)
-randomEvent: Math.floor(Math.random() * 4) + 1
+happy (!applied.recycleBonus): happy + 1
+circle (!applied.recycleBonus): Math.max(0, circle - 1)
+randomEvent (!applied.recycleBonus): Math.floor(Math.random() * 4) + 1
+applied.recycleBonus: true
 --
 <div class="passage-title">
 {translate text: "policies.recycleBonus.title"}
@@ -1175,10 +1165,10 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 
 :: REGENERATIVE PORT MATRIX [technology] {"position":"1125,1700","size":"100,100"}
-check: check + 1
-happy (check ==1): happy +1
-circle (check ==1): circle + 1
-tech (check ==1): tech -1
+happy (!applied.regenerativePortMatrix): happy +1
+circle (!applied.regenerativePortMatrix): circle + 1
+tech (!applied.regenerativePortMatrix): tech -1
+applied.regenerativePortMatrix: true
 --
 <div class="passage-title">
 {translate text: "technologies.regenerativePortMatrix.title"}
@@ -1196,7 +1186,6 @@ tech (check ==1): tech -1
 
 
 :: REPAIR PARTS MARKET COLLAPSE [event] {"position":"2050,475","size":"100,100"}
-check: 0
 --
 {translate rich text: "common.eventHappens"}<br>
 <span class="passage-title">{translate text: "events.repairPartsMarketCollapse.title"}</span>
@@ -1211,9 +1200,9 @@ check: 0
 
 
 :: REPAIR PARTS MARKET COLLAPSE - DO NOTHING [event] {"position":"2175,600","size":"100,100"}
-check: check + 1
-circle (check ==1): Math.max(0, circle - 1)
-happy (check ==1): happy - 1
+circle (!applied.repairPartsMarketCollapseDoNothing): Math.max(0, circle - 1)
+happy (!applied.repairPartsMarketCollapseDoNothing): happy - 1
+applied.repairPartsMarketCollapseDoNothing: true
 --
 <div class="passage-title">
 {translate text: "events.repairPartsMarketCollapse.outcomes.doNothing.description"}
@@ -1231,8 +1220,8 @@ happy (check ==1): happy - 1
 
 
 :: REPAIR PARTS MARKET COLLAPSE - PROVIDE FINANCIAL SUPPORT [event] {"position":"2050,600","size":"100,100"}
-check: check + 1
-money (check ==1): money - 1
+money (!applied.repairPartsMarketCollapseProvideFinancialSupport): money - 1
+applied.repairPartsMarketCollapseProvideFinancialSupport: true
 --
 <div class="passage-title">
 {translate text: "events.repairPartsMarketCollapse.outcomes.provideFinancialSupport.description"}
@@ -1250,10 +1239,10 @@ money (check ==1): money - 1
 
 
 :: RETURN DEPOSIT [policy] {"position":"1275,475","size":"100,100"}
-check: check + 1
-happy (check ==1): happy - 1
-circle (check ==1: circle + 1
-randomEvent: Math.floor(Math.random() * 4) + 1
+happy (!applied.returnDeposit): happy - 1
+circle (!applied.returnDeposit): circle + 1
+randomEvent (!applied.returnDeposit): Math.floor(Math.random() * 4) + 1
+applied.returnDeposit: true
 --
 <div class="passage-title">
 {translate text: "policies.returnDeposit.title"}
@@ -1283,7 +1272,6 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 :: Round1 [round] {"position":"1400,350","size":"100,100"}
 ui.round: 1
-check: 0
 --
 
 {translate text: "rounds.round1.text1"}
@@ -1300,7 +1288,6 @@ check: 0
 
 :: Round2 [round] {"position":"1400,600","size":"100,100"}
 ui.round: 2
-check: 0
 --
 
 {translate text: "rounds.round2.text1"}
@@ -1317,7 +1304,6 @@ check: 0
 
 :: Round3 [round] {"position":"1400,850","size":"100,100"}
 ui.round: 3
-check: 0
 --
 
 {translate text: "rounds.round3.text1"}
@@ -1334,7 +1320,6 @@ check: 0
 
 :: Round4 [round] {"position":"1400,1125","size":"100,100"}
 ui.round: 4
-check: 0
 --
 
 {translate text: "rounds.round4.text1"}
@@ -1351,7 +1336,6 @@ check: 0
 
 :: Round5 [round] {"position":"1400,1400","size":"100,100"}
 ui.round: 5
-check: 0
 --
 
 {translate text: "rounds.round5.text1"}
@@ -1368,7 +1352,6 @@ check: 0
 
 :: Round6 [round] {"position":"1400,1650","size":"100,100"}
 ui.round: 6
-check: 0
 --
 
 {translate text: "rounds.round6.text1"}
@@ -1384,8 +1367,8 @@ check: 0
 
 
 :: SCHOOL REPAIR CAFÉ [policy] {"position":"1400,725","size":"100,100"}
-check: check + 1
-circle (check ==1): circle + 1
+circle (!applied.schoolRepairCaf): circle + 1
+applied.schoolRepairCaf: true
 --
 <div class="passage-title">
 {translate text: "policies.schoolRepairCafe.title"}
@@ -1406,9 +1389,9 @@ circle (check ==1): circle + 1
 
 
 :: SELF-DESTRUCT [technology] {"position":"875,1700","size":"100,100"}
-check: check + 1
-happy (check ==1): happy +1
-tech (check ==1): tech -1
+happy (!applied.selfDestruct): happy +1
+tech (!applied.selfDestruct): tech -1
+applied.selfDestruct: true
 --
 <div class="passage-title">
 {translate text: "technologies.selfDestruct.title"}
@@ -1424,10 +1407,10 @@ tech (check ==1): tech -1
 
 
 :: SERVICE CONTRACT [policy] {"position":"1275,975","size":"100,100"}
-check: check + 1
-happy (check ==1): happy + 1
-circle (check ==1): circle + 1
-randomEvent: Math.floor(Math.random() * 4) + 1
+happy (!applied.serviceContract): happy + 1
+circle (!applied.serviceContract): circle + 1
+randomEvent (!applied.serviceContract): Math.floor(Math.random() * 4) + 1
+applied.serviceContract: true
 --
 <div class="passage-title">
 {translate text: "policies.serviceContract.title"}
@@ -1458,9 +1441,9 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 
 :: SMART BINS [technology] {"position":"1000,1700","size":"100,100"}
-check: check + 1
-circle (check ==1): circle + 1
-tech (check ==1): tech -1
+circle (!applied.smartBins): circle + 1
+tech (!applied.smartBins): tech -1
+applied.smartBins: true
 --
 <div class="passage-title">
 {translate text: "technologies.smartBins.title"}
@@ -1476,9 +1459,9 @@ tech (check ==1): tech -1
 
 
 :: SMART-SHATTERING [technology] {"position":"700,2125","size":"100,100"}
-check: check + 1
-circle (check ==1): circle +1
-tech (check ==1): tech -1
+circle (!applied.smartShattering): circle +1
+tech (!applied.smartShattering): tech -1
+applied.smartShattering: true
 --
 <div class="passage-title">
 {translate text: "technologies.smartShattering.title"}
@@ -1494,9 +1477,9 @@ tech (check ==1): tech -1
 
 
 :: SUSTAINABLE DEVICES ACT [policy] {"position":"1525,1250","size":"100,100"}
-check: check + 1
-circle (check ==1): circle + 1
-randomEvent: Math.floor(Math.random() * 4) + 1
+circle (!applied.sustainableDevicesAct): circle + 1
+randomEvent (!applied.sustainableDevicesAct): Math.floor(Math.random() * 4) + 1
+applied.sustainableDevicesAct: true
 --
 <div class="passage-title">
 {translate text: "policies.sustainableDevicesAct.title"}
@@ -1526,6 +1509,7 @@ randomEvent: Math.floor(Math.random() * 4) + 1
 
 
 :: Start [intro] {"position":"650,75","size":"100,100"}
+applied: {}
 circle: 0
 happy: 5
 money: 5
@@ -1618,7 +1602,6 @@ ui.mode: "gameplay"
 
 
 :: TOXIC WASTE [event] {"position":"1800,1250","size":"100,100"}
-check: 0
 --
 {translate rich text: "common.eventHappens"}<br>
 <span class="passage-title">{translate text: "events.toxicWaste.title"}</span>
@@ -1633,9 +1616,9 @@ check: 0
 
 
 :: TOXIC WASTE - CONTINUE RECYCLING [event] {"position":"1800,1375","size":"100,100"}
-check: check + 1
-happy (check ==1): happy - 1
-money (check ==1): money - 1
+happy (!applied.toxicWasteContinueRecycling): happy - 1
+money (!applied.toxicWasteContinueRecycling): money - 1
+applied.toxicWasteContinueRecycling: true
 --
 <div class="passage-title">
 {translate text: "events.toxicWaste.outcomes.continueRecycling.description"}
@@ -1655,8 +1638,8 @@ money (check ==1): money - 1
 
 
 :: TOXIC WASTE - INTRODUCE STRICTER REGULATIONS [event] {"position":"1925,1375","size":"100,100"}
-check: check + 1
-circle (check ==1): Math.max(0, circle - 1)
+circle (!applied.toxicWasteIntroduceStricterRegulations): Math.max(0, circle - 1)
+applied.toxicWasteIntroduceStricterRegulations: true
 --
 <div class="passage-title">
 {translate text: "events.toxicWaste.outcomes.introduceStricterRegulations.description"}
@@ -1684,8 +1667,9 @@ circle (check ==1): Math.max(0, circle - 1)
 
 
 :: Tech1 [technology] {"position":"700,375","size":"100,100"}
-money: money - 1
-tech: 1
+money (!applied.tech1): money - 1
+tech (!applied.tech1): 1
+applied.tech1: true
 --
 
 <img src="images/tech1.webp" class="story-illustration research-result-illustration">
@@ -1700,8 +1684,9 @@ tech: 1
 
 
 :: Tech2 [technology] {"position":"850,325","size":"100,100"}
-money: money - 2
-tech: 2
+money (!applied.tech2): money - 2
+tech (!applied.tech2): 2
+applied.tech2: true
 --
 
 <img src="images/tech2.webp" class="story-illustration">
@@ -1718,8 +1703,9 @@ tech: 2
 
 
 :: Tech3 [technology] {"position":"975,300","size":"100,100"}
-money: money - 3
-tech: 3
+money (!applied.tech3): money - 3
+tech (!applied.tech3): 3
+applied.tech3: true
 --
 
 <img src="images/tech3.webp" class="story-illustration">
@@ -1736,10 +1722,10 @@ tech: 3
 
 
 :: UNLOCK [policy] {"position":"1550,1800","size":"100,100"}
-check: check + 1
-happy (check ==1): happy + 1
-circle (check ==1): circle + 1
-money (check ==1): money -1
+happy (!applied.unlock): happy + 1
+circle (!applied.unlock): circle + 1
+money (!applied.unlock): money -1
+applied.unlock: true
 --
 <div class="passage-title">
 {translate text: "policies.unlock.title"}
@@ -1764,11 +1750,11 @@ money (check ==1): money -1
 
 
 :: YOUTH PROTECTION [policy] {"position":"1525,975","size":"100,100"}
-check: check + 1
-happy (check ==1): happy - 1
-circle (check ==1): circle + 1
-money (check ==1): money - 1
-randomEvent: Math.floor(Math.random() * 4) + 1
+happy (!applied.youthProtection): happy - 1
+circle (!applied.youthProtection): circle + 1
+money (!applied.youthProtection): money - 1
+randomEvent (!applied.youthProtection): Math.floor(Math.random() * 4) + 1
+applied.youthProtection: true
 --
 <div class="passage-title">
 {translate text: "policies.youthProtection.title"}

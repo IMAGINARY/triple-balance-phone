@@ -1542,3 +1542,15 @@ unchanged. No story, dictionaries, game export or analysis data were modified.
   used the official German heading, Namensnennung-Share Alike.
 - Updated the editable story and published HTML. The game loads all three icons
   locally, without contacting the Creative Commons server.
+
+## 2026-11-16 — Apply gameplay effects once per playthrough
+
+- Replaced the shared `check` counter and its resets with passage-specific
+  `applied` flags in all 48 effect passages. `Start` initializes `applied: {}`.
+- Guarded money, circularity, happiness, technology consumption/investment and
+  random draws; each passage marks itself applied after its assignments.
+- Fixed the missing parenthesis in RETURN DEPOSIT's circularity assignment.
+- Updated the published HTML and the analysis parser for the guarded syntax.
+- Assignment-level checks cover persisted-state reload and restart for all 48
+  passages. Python tests pass; enumeration still gives 3,597,500 successful
+  and 4,054,180 total terminal paths, with successful scores from 7.5 to 53.
