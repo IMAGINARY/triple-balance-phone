@@ -204,8 +204,10 @@ ui.footerLeft: "{translated link: \"common.learnScore\", to: '[[Learn more about
 ui.footerRight: "{translated link: \"common.restart\", to: '[[Restart->Start]]'}"
 ui.footerCenter: ""
 --
-<span class="credits-license-icons"><img src="images/cc-heart.png" alt="" class="credits-license-icon"> <img src="images/cc-by.png" alt="" class="credits-license-icon"> <img src="images/cc-sa.png" alt="" class="credits-license-icon"></span>
+<span class="credits-license-icons"><img src="images/cc-heart.png" alt="" class="credits-license-icon"> <img src="images/cc-by.png" alt="" class="credits-license-icon"> <img src="images/cc-sa.png" alt="" class="credits-license-icon">
+</span>
 
+<span class="credits-license">
 {translate text: "end.credits.text1"}
 
 {translate text: "end.credits.text2"}
@@ -213,6 +215,8 @@ ui.footerCenter: ""
 {translate text: "end.credits.text3"}
 
 {translate text: "end.credits.text4"}
+
+</span>
 
 <div class="credits-funding">
 {translate text: "end.credits.funding"}
@@ -2904,6 +2908,14 @@ html, body, #page, #passages {
   width: auto;
   height: 1.25em;
   vertical-align: middle;
+}
+
+#page .credits-license {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  position: relative;
+  top: 0px;
 }
 
 #page .credits-funding {
